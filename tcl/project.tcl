@@ -25,6 +25,11 @@ apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_ex
 set_property -dict [list CONFIG.preset {ZedBoard}] [get_bd_cells processing_system7_0]
 set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0]
 set_property -dict [list CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {24} CONFIG.PCW_EN_CLK1_PORT {1}] [get_bd_cells processing_system7_0]
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {1} CONFIG.PCW_I2C1_PERIPHERAL_ENABLE {1}] [get_bd_cells processing_system7_0]
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 IIC_0
+connect_bd_intf_net [get_bd_intf_pins processing_system7_0/IIC_0] [get_bd_intf_ports IIC_0]
+create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 IIC_1
+connect_bd_intf_net [get_bd_intf_pins processing_system7_0/IIC_1] [get_bd_intf_ports IIC_1]
 endgroup
 
 # Add the custom camera module
@@ -59,10 +64,10 @@ create_bd_port -dir I pclk
 connect_bd_net [get_bd_pins /camera2640_module_0/pclk] [get_bd_ports pclk]
 create_bd_port -dir I -from 7 -to 0 data_in
 connect_bd_net [get_bd_pins /camera2640_module_0/data_in] [get_bd_ports data_in]
-create_bd_port -dir IO sda
-connect_bd_net [get_bd_pins /camera2640_module_0/sda] [get_bd_ports sda]
-create_bd_port -dir IO scl
-connect_bd_net [get_bd_pins /camera2640_module_0/scl] [get_bd_ports scl]
+#create_bd_port -dir IO sda
+#connect_bd_net [get_bd_pins /camera2640_module_0/sda] [get_bd_ports sda]
+#create_bd_port -dir IO scl
+#connect_bd_net [get_bd_pins /camera2640_module_0/scl] [get_bd_ports scl]
 create_bd_port -dir O -from 3 -to 0 debug
 connect_bd_net [get_bd_pins /camera2640_module_0/debug] [get_bd_ports debug]
 create_bd_port -dir O -type clk FCLK_CLK1
@@ -72,3 +77,13 @@ endgroup
 
 # Clean up the display
 regenerate_bd_layout
+
+# Create the HDL wrapper
+make_wrapper -files [get_files G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/design_1.bd] -top
+#add_files -norecurse G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+#update_compile_order -fileset sources_1
+#update_compile_order -fileset sim_1
+
+# Save the design and run synthesis
+save_bd_design
+launch_runs synth_1 -jobs 2
