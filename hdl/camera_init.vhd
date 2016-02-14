@@ -13,7 +13,7 @@ entity ov2640_init is
 end entity ov2640_init;
 
 architecture rtl of ov2640_init is
-  component altera_edge_detector is
+  component edge_detector is
     generic (
       PULSE_EXT             : integer;
       EDGE_TYPE             : integer;
@@ -23,7 +23,7 @@ architecture rtl of ov2640_init is
       rst_n     : in  std_logic;
       signal_in : in  std_logic;
       pulse_out : out std_logic);
-  end component altera_edge_detector;
+  end component edge_detector;
   component i2cm is
     port (
       clk     : in    std_logic;
@@ -73,7 +73,7 @@ architecture rtl of ov2640_init is
   signal current_state : state_t;
   signal next_state    : state_t;
 begin
-  U0_ALTERA_EDGE_DETECTOR : altera_edge_detector
+  U0_EDGE_DETECTOR : edge_detector
     generic map (
       PULSE_EXT             => 0,
       EDGE_TYPE             => 0,

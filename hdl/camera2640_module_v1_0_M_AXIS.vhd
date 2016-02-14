@@ -4,9 +4,9 @@ use ieee.numeric_std.all;
 
 entity camera2640_module_v1_0_M_AXIS is
   generic (
-    NUMBER_OF_PIXELS : integer := 76800;
     WIDTH            : integer := 32;
-    DELAY            : integer := 32);
+    DELAY            : integer := 32;
+    NUMBER_OF_PIXELS : integer := 76800);
   port (
     --AXI stream ports
     m_axis_aclk    : in    std_logic;
@@ -15,7 +15,7 @@ entity camera2640_module_v1_0_M_AXIS is
     m_axis_tdata   : out   std_logic_vector(WIDTH-1 downto 0);
     m_axis_tstrb   : out   std_logic_vector((WIDTH/8)-1 downto 0);
     m_axis_tlast   : out   std_logic;
-    m_axis_tready  : in    std_logic
+    m_axis_tready  : in    std_logic;
     --Camera ports
     capture        : in    std_logic;
     sda            : inout std_logic;
@@ -51,13 +51,19 @@ architecture rtl of camera2640_module_v1_0_M_AXIS is
   signal rd_en         : std_logic;
   signal rd_wait       : std_logic;
   signal delay_count   : std_logic_vector(4 downto 0);
-
+  signal axis_tlast    : std_logic;
+  signal axis_tlast_r  : std_logic;
+  signal axis_tvalid   : std_logic;
+  signal axis_tvalid_r : std_logic;
+  signal pixel_count   : std_logic_vector(WIDTH-1 downto 0);
+  signal tx_en         : std_logic;
+  signal tx_done       : std_logic;
 begin
   m_axis_tvalid <= axis_tvalid_r;
   m_axis_tlast  <= axis_tlast_r;
   m_axis_tstrb  <= (others => '1');
 
-  -- Control state machine implementation                                               
+  --Control state machine implementation                                               
   process(m_axis_aclk)
   begin
     if rising_edge(m_axis_aclk) then
@@ -67,17 +73,22 @@ begin
       else
         case (current_state) is
           when s_idle =>
-            delay_count   <= (others => '0');
-            current_state <= s_init_counter;
+            delay_count <= (others => '0');
+            if status = '1' then
+              current_state <= s_init_counter;
+            else
+              current_state <= s_idle;
+            end if;
           when s_init_counter =>
-            if delay_count = std_logic_vector(to_unsigned(DELAY), 5) then
+            if delay_count = std_logic_vector(to_unsigned(DELAY, 5)) then
+              delay_count   <= delay_count;
               current_state <= s_send_stream;
             else
-              delay_count   <= std_logic_vector (unsigned(delay_count) + 1);
+              delay_count   <= std_logic_vector(unsigned(delay_count) + 1);
               current_state <= s_init_counter;
             end if;
           when s_send_stream =>
-            delay_count <= (others => '0')
+            delay_count <= (others => '0');
             if tx_done = '1' then
               current_state <= s_idle;
             else
@@ -88,61 +99,47 @@ begin
     end if;
   end process;
 
+  axis_tvalid <= '1' when ((current_state = s_send_stream) and (pixel_count < std_logic_vector(to_unsigned(NUMBER_OF_PIXELS, WIDTH)))) else '0';
+  axis_tlast  <= '1' when (pixel_count = std_logic_vector(to_unsigned(NUMBER_OF_PIXELS-1, WIDTH)))                                     else '0';
 
-  --tvalid generation
-  --axis_tvalid is asserted when the control state machine's state is SEND_STREAM and
-  --number of output streaming data is less than the NUMBER_OF_OUTPUT_WORDS.
-  axis_tvalid <= '1' when ((mst_exec_state = SEND_STREAM) and (read_pointer < NUMBER_OF_OUTPUT_WORDS)) else '0';
-
-  -- AXI tlast generation                                                                        
-  -- axis_tlast is asserted number of output streaming data is NUMBER_OF_OUTPUT_WORDS-1          
-  -- (0 to NUMBER_OF_OUTPUT_WORDS-1)                                                             
-  axis_tlast <= '1' when (read_pointer = NUMBER_OF_OUTPUT_WORDS-1) else '0';
-
-  -- Delay the axis_tvalid and axis_tlast signal by one clock cycle                              
-  -- to match the latency of M_AXIS_TDATA                                                        
-  process(M_AXIS_ACLK)
+  process(m_axis_aclk)
   begin
-    if (rising_edge (M_AXIS_ACLK)) then
-      if(M_AXIS_ARESETN = '0') then
-        axis_tvalid_delay <= '0';
-        axis_tlast_delay  <= '0';
+    if (rising_edge (m_axis_aclk)) then
+      if(m_axis_aresetn = '0') then
+        axis_tvalid_r <= '0';
+        axis_tlast_r  <= '0';
       else
-        axis_tvalid_delay <= axis_tvalid;
-        axis_tlast_delay  <= axis_tlast;
+        axis_tvalid_r <= axis_tvalid;
+        axis_tlast_r  <= axis_tlast;
       end if;
     end if;
   end process;
 
-
-  --read_pointer pointer
-
-  process(M_AXIS_ACLK)
+  --Pixel counter
+  process(m_axis_aclk)
   begin
-    if (rising_edge (M_AXIS_ACLK)) then
-      if(M_AXIS_ARESETN = '0') then
-        read_pointer <= 0;
-        tx_done      <= '0';
+    if rising_edge (m_axis_aclk) then
+      if m_axis_aresetn = '0' then
+        pixel_count <= (others => '0');
+        tx_done     <= '0';
       else
-        if (read_pointer <= NUMBER_OF_OUTPUT_WORDS-1) then
-          if (tx_en = '1') then
-            -- read pointer is incremented after every read from the FIFO          
-            -- when FIFO read signal is enabled.                                   
-            read_pointer <= read_pointer + 1;
-            tx_done      <= '0';
+        if (pixel_count <= std_logic_vector(to_unsigned(NUMBER_OF_PIXELS-1, WIDTH))) then
+          if tx_en = '1' then
+            pixel_count <= std_logic_vector(unsigned(pixel_count) + to_unsigned(1, WIDTH));
+            tx_done     <= '0';
           end if;
-        elsif (read_pointer = NUMBER_OF_OUTPUT_WORDS) then
-          -- tx_done is asserted when NUMBER_OF_OUTPUT_WORDS numbers of streaming data
-          -- has been out.                                                         
-          tx_done <= '1';
+        else
+          if pixel_count = std_logic_vector(to_unsigned(NUMBER_OF_PIXELS, WIDTH)) then
+            tx_done <= '1';
+          end if;
         end if;
       end if;
     end if;
   end process;
 
-
-  --FIFO read enable generation 
-  rd_en <= m_axis_tready and rd_wait;
+  --FIFO read enable generation
+  rd_en <= m_axis_tready and axis_tvalid_r;
+  tx_en <= not rd_wait and axis_tvalid_r;
 
   camera2640_1 : camera2640
     port map (
@@ -161,4 +158,4 @@ begin
       rd_wait  => rd_wait,
       debug    => debug);
 
-end implementation;
+end architecture rtl;

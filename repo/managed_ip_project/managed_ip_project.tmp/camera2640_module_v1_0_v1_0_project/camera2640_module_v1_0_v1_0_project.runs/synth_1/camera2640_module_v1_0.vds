@@ -1,0 +1,684 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sun Feb 14 15:01:33 2016
+# Process ID: 2872
+# Current directory: g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.runs/synth_1
+# Command line: vivado.exe -log camera2640_module_v1_0.vds -mode batch -messageDb vivado.pb -notrace -source camera2640_module_v1_0.tcl
+# Log file: g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.runs/synth_1/camera2640_module_v1_0.vds
+# Journal file: g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source camera2640_module_v1_0.tcl -notrace
+Command: synth_design -top camera2640_module_v1_0 -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 261.035 ; gain = 88.785
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'camera2640_module_v1_0' [g:/zynq_project/repo/camera2640_module_1.0/hdl/camera2640_module_v1_0.vhd:28]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter DELAY bound to: 32 - type: integer 
+	Parameter NUMBER_OF_PIXELS bound to: 76800 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter DELAY bound to: 32 - type: integer 
+	Parameter NUMBER_OF_PIXELS bound to: 76800 - type: integer 
+INFO: [Synth 8-3491] module 'camera2640_module_v1_0_M_AXIS' declared at 'g:/zynq_project/repo/camera2640_module_1.0/hdl/camera2640_module_v1_0_m_axis.vhd:5' bound to instance 'camera2640_module_v1_0_M_AXIS_1' of component 'camera2640_module_v1_0_M_AXIS' [g:/zynq_project/repo/camera2640_module_1.0/hdl/camera2640_module_v1_0.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'camera2640_module_v1_0_M_AXIS' [g:/zynq_project/repo/camera2640_module_1.0/hdl/camera2640_module_v1_0_m_axis.vhd:30]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter DELAY bound to: 32 - type: integer 
+	Parameter NUMBER_OF_PIXELS bound to: 76800 - type: integer 
+INFO: [Synth 8-3491] module 'camera2640' declared at 'G:/zynq_project/hdl/camera2640.vhd:5' bound to instance 'camera2640_1' of component 'camera2640' [g:/zynq_project/repo/camera2640_module_1.0/hdl/camera2640_module_v1_0_m_axis.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'camera2640' [G:/zynq_project/hdl/camera2640.vhd:23]
+INFO: [Synth 8-3491] module 'ov2640_init' declared at 'G:/zynq_project/hdl/camera_init.vhd:5' bound to instance 'U0_CAMERA2640_INIT' of component 'ov2640_init' [G:/zynq_project/hdl/camera2640.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'ov2640_init' [G:/zynq_project/hdl/camera_init.vhd:15]
+	Parameter PULSE_EXT bound to: 0 - type: integer 
+	Parameter EDGE_TYPE bound to: 0 - type: integer 
+	Parameter IGNORE_RST_WHILE_BUSY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'edge_detector' declared at 'G:/zynq_project/hdl/edge_detector.v:1' bound to instance 'U0_EDGE_DETECTOR' of component 'edge_detector' [G:/zynq_project/hdl/camera_init.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'edge_detector' [G:/zynq_project/hdl/edge_detector.v:1]
+	Parameter PULSE_EXT bound to: 0 - type: integer 
+	Parameter EDGE_TYPE bound to: 0 - type: integer 
+	Parameter IGNORE_RST_WHILE_BUSY bound to: 0 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter ARM bound to: 1 - type: integer 
+	Parameter CAPT bound to: 2 - type: integer 
+	Parameter SIGNAL_ASSERT bound to: 1'b0 
+	Parameter SIGNAL_DEASSERT bound to: 1'b1 
+INFO: [Synth 8-256] done synthesizing module 'edge_detector' (1#1) [G:/zynq_project/hdl/edge_detector.v:1]
+INFO: [Synth 8-3491] module 'i2cm' declared at 'G:/zynq_project/hdl/i2cm.vhd:5' bound to instance 'U1_I2C_MASTER' of component 'i2cm' [G:/zynq_project/hdl/camera_init.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'i2cm' [G:/zynq_project/hdl/i2cm.vhd:21]
+WARNING: [Synth 8-3848] Net rd_data in module/entity i2cm does not have driver. [G:/zynq_project/hdl/i2cm.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'i2cm' (2#1) [G:/zynq_project/hdl/i2cm.vhd:21]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'ov2640reg_rom' declared at 'G:/zynq_project/hdl/ov2640reg_rom.vhd:5' bound to instance 'U2_OV2640REG_ROM' of component 'ov2640reg_rom' [G:/zynq_project/hdl/camera_init.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'ov2640reg_rom' [G:/zynq_project/hdl/ov2640reg_rom.vhd:18]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ov2640reg_rom' (3#1) [G:/zynq_project/hdl/ov2640reg_rom.vhd:18]
+WARNING: [Synth 8-614] signal 'i2c_wr_reg_data' is read in the process but is not in the sensitivity list [G:/zynq_project/hdl/camera_init.vhd:144]
+WARNING: [Synth 8-614] signal 'i2c_wr_data_data' is read in the process but is not in the sensitivity list [G:/zynq_project/hdl/camera_init.vhd:144]
+WARNING: [Synth 8-3848] Net i2c_rd_reg in module/entity ov2640_init does not have driver. [G:/zynq_project/hdl/camera_init.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'ov2640_init' (4#1) [G:/zynq_project/hdl/camera_init.vhd:15]
+INFO: [Synth 8-3491] module 'capture_frame' declared at 'G:/zynq_project/hdl/capture_frame.vhd:5' bound to instance 'U1_CAPTURE_FRAME' of component 'capture_frame' [G:/zynq_project/hdl/camera2640.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'capture_frame' [G:/zynq_project/hdl/capture_frame.vhd:20]
+	Parameter PULSE_EXT bound to: 0 - type: integer 
+	Parameter EDGE_TYPE bound to: 0 - type: integer 
+	Parameter IGNORE_RST_WHILE_BUSY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'edge_detector' declared at 'G:/zynq_project/hdl/edge_detector.v:1' bound to instance 'U0_CAPTURE_START' of component 'edge_detector' [G:/zynq_project/hdl/capture_frame.vhd:54]
+	Parameter PULSE_EXT bound to: 0 - type: integer 
+	Parameter EDGE_TYPE bound to: 1 - type: integer 
+	Parameter IGNORE_RST_WHILE_BUSY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'edge_detector' declared at 'G:/zynq_project/hdl/edge_detector.v:1' bound to instance 'U1_VSYNC_START' of component 'edge_detector' [G:/zynq_project/hdl/capture_frame.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'edge_detector__parameterized1' [G:/zynq_project/hdl/edge_detector.v:1]
+	Parameter PULSE_EXT bound to: 0 - type: integer 
+	Parameter EDGE_TYPE bound to: 1 - type: integer 
+	Parameter IGNORE_RST_WHILE_BUSY bound to: 0 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter ARM bound to: 1 - type: integer 
+	Parameter CAPT bound to: 2 - type: integer 
+	Parameter SIGNAL_ASSERT bound to: 1'b1 
+	Parameter SIGNAL_DEASSERT bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'edge_detector__parameterized1' (4#1) [G:/zynq_project/hdl/edge_detector.v:1]
+	Parameter PULSE_EXT bound to: 0 - type: integer 
+	Parameter EDGE_TYPE bound to: 0 - type: integer 
+	Parameter IGNORE_RST_WHILE_BUSY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'edge_detector' declared at 'G:/zynq_project/hdl/edge_detector.v:1' bound to instance 'U2_VSYNC_END' of component 'edge_detector' [G:/zynq_project/hdl/capture_frame.vhd:76]
+INFO: [Synth 8-3491] module 'frame_fifo' declared at 'g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.runs/synth_1/.Xil/Vivado-2872-/realtime/frame_fifo_stub.vhdl:5' bound to instance 'U4_FRAME_FIFO' of component 'frame_fifo' [G:/zynq_project/hdl/capture_frame.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'frame_fifo' [g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.runs/synth_1/.Xil/Vivado-2872-/realtime/frame_fifo_stub.vhdl:22]
+INFO: [Synth 8-256] done synthesizing module 'capture_frame' (5#1) [G:/zynq_project/hdl/capture_frame.vhd:20]
+	Parameter PULSE_EXT bound to: 0 - type: integer 
+	Parameter EDGE_TYPE bound to: 0 - type: integer 
+	Parameter IGNORE_RST_WHILE_BUSY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'edge_detector' declared at 'G:/zynq_project/hdl/edge_detector.v:1' bound to instance 'U2_CAPTURE_START' of component 'edge_detector' [G:/zynq_project/hdl/camera2640.vhd:88]
+WARNING: [Synth 8-3848] Net status in module/entity camera2640 does not have driver. [G:/zynq_project/hdl/camera2640.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'camera2640' (6#1) [G:/zynq_project/hdl/camera2640.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'camera2640_module_v1_0_M_AXIS' (7#1) [g:/zynq_project/repo/camera2640_module_1.0/hdl/camera2640_module_v1_0_m_axis.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'camera2640_module_v1_0' (8#1) [g:/zynq_project/repo/camera2640_module_1.0/hdl/camera2640_module_v1_0.vhd:28]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 297.422 ; gain = 125.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin U1_I2C_MASTER:rd_reg[7] to constant 0 [G:/zynq_project/hdl/camera_init.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin U1_I2C_MASTER:rd_reg[6] to constant 0 [G:/zynq_project/hdl/camera_init.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin U1_I2C_MASTER:rd_reg[5] to constant 0 [G:/zynq_project/hdl/camera_init.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin U1_I2C_MASTER:rd_reg[4] to constant 0 [G:/zynq_project/hdl/camera_init.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin U1_I2C_MASTER:rd_reg[3] to constant 0 [G:/zynq_project/hdl/camera_init.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin U1_I2C_MASTER:rd_reg[2] to constant 0 [G:/zynq_project/hdl/camera_init.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin U1_I2C_MASTER:rd_reg[1] to constant 0 [G:/zynq_project/hdl/camera_init.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin U1_I2C_MASTER:rd_reg[0] to constant 0 [G:/zynq_project/hdl/camera_init.vhd:87]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 297.422 ; gain = 125.172
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.runs/synth_1/.Xil/Vivado-2872-/dcp/frame_fifo_in_context.xdc] for cell 'camera2640_module_v1_0_M_AXIS_1/camera2640_1/U1_CAPTURE_FRAME/U4_FRAME_FIFO'
+Finished Parsing XDC File [g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.runs/synth_1/.Xil/Vivado-2872-/dcp/frame_fifo_in_context.xdc] for cell 'camera2640_module_v1_0_M_AXIS_1/camera2640_1/U1_CAPTURE_FRAME/U4_FRAME_FIFO'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 605.363 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 605.363 ; gain = 433.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 605.363 ; gain = 433.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 605.363 ; gain = 433.113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'frame_state_reg' in module 'capture_frame'
+INFO: [Synth 8-5545] ROM "status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "capture" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "frame_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "frame_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "frame_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "init_en" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "debug" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "current_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "delay_count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "axis_tlast" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tx_done" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 | 00000000000000000000000000000000
+                 iSTATE0 |                               01 | 00000000000000000000000000000001
+                 iSTATE1 |                               10 | 00000000000000000000000000000010
+                 iSTATE2 |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'frame_state_reg' using encoding 'sequential' in module 'capture_frame'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 605.363 ; gain = 433.113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   9 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 8     
+	   9 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module edge_detector 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module i2cm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   9 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+	   9 Input      1 Bit        Muxes := 4     
+Module ov2640_init 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 4     
+Module edge_detector__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module capture_frame 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module camera2640 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module camera2640_module_v1_0_M_AXIS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      5 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 605.363 ; gain = 433.113
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "camera2640_module_v1_0_M_AXIS_1/tx_done" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "camera2640_module_v1_0_M_AXIS_1/axis_tlast" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3917] design camera2640_module_v1_0 has port m_axis_tstrb[3] driven by constant 1
+WARNING: [Synth 8-3917] design camera2640_module_v1_0 has port m_axis_tstrb[2] driven by constant 1
+WARNING: [Synth 8-3917] design camera2640_module_v1_0 has port m_axis_tstrb[1] driven by constant 1
+WARNING: [Synth 8-3917] design camera2640_module_v1_0 has port m_axis_tstrb[0] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 605.363 ; gain = 433.113
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 605.363 ; gain = 433.113
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++--------------+------------+---------------+----------------+
+|Module Name   | RTL Object | Depth x Width | Implemented As | 
++--------------+------------+---------------+----------------+
+|ov2640reg_rom | rom        | 256x16        | LUT            | 
+|ov2640_init   | rom        | 256x16        | LUT            | 
++--------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[23] ' (FDCE) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[20] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[22] ' (FDCE) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[21] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[20] ' (FDCE) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[19] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[19] ' (FDCE) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[18] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[18] ' (FDCE) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[17] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[17] ' (FDCE) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[16] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[16] )
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[19] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[18] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[17] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[23] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[22] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[21] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[20] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[29] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[28] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[30] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[30] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[27] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[25] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[27] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[24] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[27] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[27] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[26] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[26] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[4] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[2] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[3] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[8] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[7] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[6] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[5] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[14] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[13] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[15] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[15] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[12] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[10] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[12] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[9] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[12] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[12] ' (FDC) to '\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[11] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[11] )
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[4] ' (FDRE) to '\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[0] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[3] ' (FDRE) to '\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[0] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[2] ' (FDRE) to '\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[0] '
+INFO: [Synth 8-3886] merging instance '\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[1] ' (FDRE) to '\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[0] '
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_67/\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[23] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[22] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[20] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[19] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[18] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[17] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U0_CAMERA2640_INIT/U1_I2C_MASTER/sda_b_cat_reg[16] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/U1_CAPTURE_FRAME/status_reg ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[31] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[30] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[29] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[28] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[27] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[26] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[25] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[24] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[23] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[22] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[21] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[20] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[19] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[18] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[17] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[16] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[15] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[14] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[13] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[12] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[11] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[10] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[9] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[8] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[7] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[6] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[5] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[4] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[3] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/camera2640_1/run_state_reg[2] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[0] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[1] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[2] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[3] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[4] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[5] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[6] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[7] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[8] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[9] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[10] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[11] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[12] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[13] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[14] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[15] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[16] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[17] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[18] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[19] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[20] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[21] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[22] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[23] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[24] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[25] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[26] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[27] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[28] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[29] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[30] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/pixel_count_reg[31] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[4] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[3] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[2] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[1] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/delay_count_reg[0] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/tx_done_reg ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/current_state_reg[1] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/current_state_reg[0] ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/axis_tvalid_r_reg ) is unused and will be removed from module camera2640_module_v1_0.
+WARNING: [Synth 8-3332] Sequential element (\camera2640_module_v1_0_M_AXIS_1/axis_tlast_r_reg ) is unused and will be removed from module camera2640_module_v1_0.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 605.363 ; gain = 433.113
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 605.363 ; gain = 433.113
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 605.363 ; gain = 433.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 605.363 ; gain = 433.113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 610.820 ; gain = 438.570
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 610.820 ; gain = 438.570
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 610.820 ; gain = 438.570
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 610.820 ; gain = 438.570
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 610.820 ; gain = 438.570
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 610.820 ; gain = 438.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 610.820 ; gain = 438.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 610.820 ; gain = 438.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 610.820 ; gain = 438.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |frame_fifo    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |frame_fifo_bbox |     1|
+|2     |BUFG            |     1|
+|3     |CARRY4          |    20|
+|4     |LUT1            |    36|
+|5     |LUT2            |    97|
+|6     |LUT3            |    22|
+|7     |LUT4            |     9|
+|8     |LUT5            |    21|
+|9     |LUT6            |   117|
+|10    |MUXF7           |    16|
+|11    |MUXF8           |     2|
+|12    |FDCE            |    97|
+|13    |FDPE            |     2|
+|14    |FDRE            |    14|
+|15    |IBUF            |    14|
+|16    |OBUF            |    40|
+|17    |OBUFT           |     4|
++------+----------------+------+
+
+Report Instance Areas: 
++------+----------------------------------+------------------------------+------+
+|      |Instance                          |Module                        |Cells |
++------+----------------------------------+------------------------------+------+
+|1     |top                               |                              |   548|
+|2     |  camera2640_module_v1_0_M_AXIS_1 |camera2640_module_v1_0_M_AXIS |   488|
+|3     |    camera2640_1                  |camera2640                    |   488|
+|4     |      U0_CAMERA2640_INIT          |ov2640_init                   |   413|
+|5     |        U0_EDGE_DETECTOR          |edge_detector_2               |     7|
+|6     |        U1_I2C_MASTER             |i2cm                          |   370|
+|7     |      U1_CAPTURE_FRAME            |capture_frame                 |    61|
+|8     |        U0_CAPTURE_START          |edge_detector_0               |     6|
+|9     |        U1_VSYNC_START            |edge_detector__parameterized1 |     6|
+|10    |        U2_VSYNC_END              |edge_detector_1               |     6|
+|11    |      U2_CAPTURE_START            |edge_detector                 |     6|
++------+----------------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 610.820 ; gain = 438.570
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 84 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 610.820 ; gain = 110.727
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 610.820 ; gain = 438.570
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+131 Infos, 97 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 610.820 ; gain = 422.145
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 610.820 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 14 15:02:20 2016...

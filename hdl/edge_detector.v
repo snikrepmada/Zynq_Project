@@ -1,4 +1,4 @@
-module altera_edge_detector #(
+module edge_detector #(
 parameter PULSE_EXT = 0, // 0, 1 = edge detection generate single cycle pulse, >1 = pulse extended for specified clock cycle
 parameter EDGE_TYPE = 0, // 0 = falling edge, 1 or else = rising edge
 parameter IGNORE_RST_WHILE_BUSY = 0  // 0 = module internal reset will be default whenever rst_n asserted, 1 = rst_n request will be ignored while generating pulse out
