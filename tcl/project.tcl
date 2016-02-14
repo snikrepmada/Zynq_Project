@@ -24,6 +24,7 @@ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_sy
 apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
 set_property -dict [list CONFIG.preset {ZedBoard}] [get_bd_cells processing_system7_0]
 set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0]
+set_property -dict [list CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {24} CONFIG.PCW_EN_CLK1_PORT {1}] [get_bd_cells processing_system7_0]
 endgroup
 
 # Add the custom camera module
@@ -64,6 +65,9 @@ create_bd_port -dir IO scl
 connect_bd_net [get_bd_pins /camera2640_module_0/scl] [get_bd_ports scl]
 create_bd_port -dir O -from 3 -to 0 debug
 connect_bd_net [get_bd_pins /camera2640_module_0/debug] [get_bd_ports debug]
+create_bd_port -dir O -type clk FCLK_CLK1
+connect_bd_net [get_bd_pins /processing_system7_0/FCLK_CLK1] [get_bd_ports FCLK_CLK1]
+set_property name XCLK [get_bd_ports FCLK_CLK1]
 endgroup
 
 # Clean up the display
