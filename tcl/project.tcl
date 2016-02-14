@@ -88,3 +88,6 @@ update_compile_order -fileset sim_1
 save_bd_design
 launch_runs synth_1 -jobs 2
 launch_runs impl_1 -jobs 2
+
+# Add pin connections contraints file to project
+

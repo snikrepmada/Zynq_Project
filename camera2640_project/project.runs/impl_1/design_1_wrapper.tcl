@@ -70,6 +70,8 @@ set rc [catch {
   set_property processing_order EARLY [get_files g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_board.xdc]
   read_xdc -ref design_1_rst_processing_system7_0_100M_0 g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc
   set_property processing_order EARLY [get_files g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc]
+  read_xdc G:/zynq_project/camera2640_project/project.srcs/constrs_1/new/camera2640_zedboard_pinmap.xdc
+  read_xdc G:/zynq_project/constraint/clk_const.xdc
   read_xdc -ref frame_fifo -cells U0 g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/frame_fifo/frame_fifo_clocks.xdc
   set_property processing_order LATE [get_files g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/frame_fifo/frame_fifo_clocks.xdc]
   read_xdc -ref design_1_axi_dma_0_0 -cells U0 g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc

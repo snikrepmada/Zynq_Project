@@ -35,6 +35,12 @@ set_property used_in_implementation false [get_files -all G:/zynq_project/camera
 set_property is_locked true [get_files G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/design_1.bd]
 
 read_vhdl -library xil_defaultlib G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+read_xdc G:/zynq_project/camera2640_project/project.srcs/constrs_1/new/camera2640_zedboard_pinmap.xdc
+set_property used_in_implementation false [get_files G:/zynq_project/camera2640_project/project.srcs/constrs_1/new/camera2640_zedboard_pinmap.xdc]
+
+read_xdc G:/zynq_project/constraint/clk_const.xdc
+set_property used_in_implementation false [get_files G:/zynq_project/constraint/clk_const.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 synth_design -top design_1_wrapper -part xc7z020clg484-1
