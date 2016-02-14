@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Sun Feb 14 15:01:33 2016
-# Process ID: 2872
+# Start of session at: Sun Feb 14 17:23:45 2016
+# Process ID: 2644
 # Current directory: g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.runs/synth_1
 # Command line: vivado.exe -log camera2640_module_v1_0.vds -mode batch -messageDb vivado.pb -notrace -source camera2640_module_v1_0.tcl
 # Log file: g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.runs/synth_1/camera2640_module_v1_0.vds

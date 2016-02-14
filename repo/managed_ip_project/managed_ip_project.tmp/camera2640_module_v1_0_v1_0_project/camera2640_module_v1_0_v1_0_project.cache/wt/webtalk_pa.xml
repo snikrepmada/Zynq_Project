@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sun Feb 14 15:04:24 2016">
+<application name="pa" timeStamp="Sun Feb 14 17:32:10 2016">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="94e61572614a402a827d3ea47074a751" type="ProjectID"/>
-<property name="ProjectIteration" value="1" type="ProjectIteration"/>
+<property name="ProjectID" value="e7dd48326d3b4631bdd3ef0cafe04bce" type="ProjectID"/>
+<property name="ProjectIteration" value="2" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -18,6 +18,7 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Java Command Handlers">
 <property name="CloseProject" value="0" type="JavaHandler"/>
+<property name="RunImplementation" value="0" type="JavaHandler"/>
 <property name="RunSynthesis" value="0" type="JavaHandler"/>
 </item>
 <item name="Other">

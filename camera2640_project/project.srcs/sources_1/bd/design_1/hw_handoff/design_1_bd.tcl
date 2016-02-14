@@ -156,8 +156,6 @@ proc create_root_design { parentCell } {
   set debug [ create_bd_port -dir O -from 3 -to 0 debug ]
   set href [ create_bd_port -dir I href ]
   set pclk [ create_bd_port -dir I pclk ]
-  set scl [ create_bd_port -dir IO scl ]
-  set sda [ create_bd_port -dir IO sda ]
   set vsync [ create_bd_port -dir I vsync ]
 
   # Create instance: axi_dma_0, and set properties
@@ -210,8 +208,6 @@ CONFIG.NUM_MI {1} \
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_dma_0/S_AXI_LITE] [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI]
 
   # Create port connections
-  connect_bd_net -net Net [get_bd_ports sda] [get_bd_pins camera2640_module_0/sda]
-  connect_bd_net -net Net1 [get_bd_ports scl] [get_bd_pins camera2640_module_0/scl]
   connect_bd_net -net camera2640_module_0_debug [get_bd_ports debug] [get_bd_pins camera2640_module_0/debug]
   connect_bd_net -net capture_1 [get_bd_ports capture] [get_bd_pins camera2640_module_0/capture]
   connect_bd_net -net data_in_1 [get_bd_ports data_in] [get_bd_pins camera2640_module_0/data_in]
@@ -232,48 +228,44 @@ CONFIG.NUM_MI {1} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port vsync -pg 1 -y 500 -defaultsOSRD
-preplace port DDR -pg 1 -y 210 -defaultsOSRD
-preplace port scl -pg 1 -y 550 -defaultsOSRD
-preplace port XCLK -pg 1 -y 500 -defaultsOSRD
-preplace port href -pg 1 -y 520 -defaultsOSRD
-preplace port sda -pg 1 -y 530 -defaultsOSRD
-preplace port IIC_0 -pg 1 -y 340 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 230 -defaultsOSRD
-preplace port IIC_1 -pg 1 -y 360 -defaultsOSRD
-preplace port capture -pg 1 -y 480 -defaultsOSRD
-preplace port pclk -pg 1 -y 540 -defaultsOSRD
-preplace portBus debug -pg 1 -y 570 -defaultsOSRD
-preplace portBus data_in -pg 1 -y 560 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 3 -y 380 -defaultsOSRD
-preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 80 -defaultsOSRD
-preplace inst camera2640_module_0 -pg 1 -lvl 5 -y 690 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 4 -y 280 -defaultsOSRD
-preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 300 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 5 -y 350 -defaultsOSRD
+preplace port vsync -pg 1 -y 470 -defaultsOSRD
+preplace port DDR -pg 1 -y 60 -defaultsOSRD
+preplace port XCLK -pg 1 -y 260 -defaultsOSRD
+preplace port href -pg 1 -y 490 -defaultsOSRD
+preplace port IIC_0 -pg 1 -y 100 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 80 -defaultsOSRD
+preplace port IIC_1 -pg 1 -y 120 -defaultsOSRD
+preplace port capture -pg 1 -y 450 -defaultsOSRD
+preplace port pclk -pg 1 -y 510 -defaultsOSRD
+preplace portBus debug -pg 1 -y 540 -defaultsOSRD
+preplace portBus data_in -pg 1 -y 530 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -y 370 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 350 -defaultsOSRD
+preplace inst camera2640_module_0 -pg 1 -lvl 5 -y 510 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -y 200 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 130 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -y 170 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 5 1 NJ
 preplace netloc camera2640_module_0_debug 1 5 1 NJ
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 670
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 360 130 NJ 130 NJ 130 NJ 130 1820
-preplace netloc href_1 1 0 5 NJ 520 NJ 520 NJ 520 NJ 520 NJ
-preplace netloc capture_1 1 0 5 NJ 480 NJ 480 NJ 480 NJ 480 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 10 570 NJ 570 NJ 570 NJ 570 NJ 570 1820
-preplace netloc processing_system7_0_IIC_0 1 5 1 N
-preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1400
-preplace netloc processing_system7_0_IIC_1 1 5 1 N
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 330 170 660 190 1030 160 NJ
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 680
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 350 10 NJ 10 NJ 10 NJ 10 1810
+preplace netloc href_1 1 0 5 NJ 490 NJ 490 NJ 490 NJ 490 NJ
+preplace netloc capture_1 1 0 5 NJ 450 NJ 450 NJ 480 NJ 450 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30 510 NJ 510 NJ 510 NJ 340 NJ 340 1800
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1360
+preplace netloc processing_system7_0_IIC_0 1 5 1 NJ
+preplace netloc processing_system7_0_IIC_1 1 5 1 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 4 370 390 680 520 1040 520 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 5 1 NJ
-preplace netloc data_in_1 1 0 5 NJ 560 NJ 560 NJ 560 NJ 560 NJ
-preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1040
-preplace netloc camera2640_module_0_m_axis 1 2 4 690 120 NJ 120 NJ 120 1840
-preplace netloc pclk_1 1 0 5 NJ 540 NJ 540 NJ 540 NJ 540 NJ
-preplace netloc Net1 1 5 1 NJ
-preplace netloc Net 1 5 1 NJ
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 340 150 NJ 150 1010
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 0 180 350 180 680 180 1020 150 1390 580 1830
-preplace netloc processing_system7_0_FCLK_CLK1 1 5 1 N
-preplace netloc vsync_1 1 0 5 NJ 500 NJ 500 NJ 500 NJ 500 NJ
-levelinfo -pg 1 -20 170 510 850 1190 1610 1890 -top 0 -bot 800
+preplace netloc data_in_1 1 0 5 NJ 530 NJ 530 NJ 530 NJ 530 NJ
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1020
+preplace netloc camera2640_module_0_m_axis 1 2 4 700 460 NJ 400 NJ 400 1800
+preplace netloc pclk_1 1 0 5 NJ 500 NJ 500 NJ 500 NJ 500 NJ
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 360 250 NJ 180 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 30 260 350 260 690 240 1030 80 1370 330 1810
+preplace netloc processing_system7_0_FCLK_CLK1 1 5 1 NJ
+preplace netloc vsync_1 1 0 5 NJ 470 NJ 470 NJ 470 NJ 470 NJ
+levelinfo -pg 1 0 190 520 860 1210 1590 1830 -top 0 -bot 620
 ",
 }
 

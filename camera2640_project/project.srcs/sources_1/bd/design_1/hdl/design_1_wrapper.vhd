@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
---Date        : Sun Feb 14 17:01:04 2016
+--Date        : Sun Feb 14 17:37:01 2016
 --Host        : PerkWinMini running 64-bit Service Pack 1  (build 7601)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -44,8 +44,6 @@ entity design_1_wrapper is
     iic_1_scl_io : inout STD_LOGIC;
     iic_1_sda_io : inout STD_LOGIC;
     pclk : in STD_LOGIC;
-    scl : inout STD_LOGIC;
-    sda : inout STD_LOGIC;
     vsync : in STD_LOGIC
   );
 end design_1_wrapper;
@@ -74,15 +72,6 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    capture : in STD_LOGIC;
-    vsync : in STD_LOGIC;
-    href : in STD_LOGIC;
-    pclk : in STD_LOGIC;
-    data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    sda : inout STD_LOGIC;
-    scl : inout STD_LOGIC;
-    debug : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    XCLK : out STD_LOGIC;
     IIC_0_sda_i : in STD_LOGIC;
     IIC_0_sda_o : out STD_LOGIC;
     IIC_0_sda_t : out STD_LOGIC;
@@ -94,7 +83,14 @@ architecture STRUCTURE of design_1_wrapper is
     IIC_1_sda_t : out STD_LOGIC;
     IIC_1_scl_i : in STD_LOGIC;
     IIC_1_scl_o : out STD_LOGIC;
-    IIC_1_scl_t : out STD_LOGIC
+    IIC_1_scl_t : out STD_LOGIC;
+    capture : in STD_LOGIC;
+    vsync : in STD_LOGIC;
+    href : in STD_LOGIC;
+    pclk : in STD_LOGIC;
+    data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    debug : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    XCLK : out STD_LOGIC
   );
   end component design_1;
   component IOBUF is
@@ -159,8 +155,6 @@ design_1_i: component design_1
       debug(3 downto 0) => debug(3 downto 0),
       href => href,
       pclk => pclk,
-      scl => scl,
-      sda => sda,
       vsync => vsync
     );
 iic_0_scl_iobuf: component IOBUF

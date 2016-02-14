@@ -1,0 +1,189 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date             : Sun Feb 14 17:27:25 2016
+| Host             : PerkWinMini running 64-bit Service Pack 1  (build 7601)
+| Command          : 
+| Design           : camera2640_module_v1_0
+| Device           : xc7z020clg484-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 1.592 |
+| Dynamic (W)              | 1.449 |
+| Device Static (W)        | 0.143 |
+| Effective TJA (C/W)      | 11.5  |
+| Max Ambient (C)          | 66.6  |
+| Junction Temperature (C) | 43.4  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |     0.634 |      616 |       --- |             --- |
+|   LUT as Logic |     0.580 |      296 |     53200 |            0.56 |
+|   Register     |     0.022 |      187 |    106400 |            0.18 |
+|   BUFG         |     0.012 |        2 |        32 |            6.25 |
+|   CARRY4       |     0.011 |       28 |     13300 |            0.21 |
+|   F7/F8 Muxes  |     0.009 |       18 |     53200 |            0.03 |
+|   Others       |     0.000 |       44 |       --- |             --- |
+| Signals        |     0.581 |      545 |       --- |             --- |
+| Block RAM      |     0.040 |        4 |       140 |            2.86 |
+| I/O            |     0.194 |       56 |       200 |           28.00 |
+| Static Power   |     0.143 |          |           |                 |
+| Total          |     1.592 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     1.318 |       1.303 |      0.014 |
+| Vccaux    |       1.800 |     0.032 |       0.012 |      0.020 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.068 |       0.067 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.005 |       0.004 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.029 |       0.000 |      0.029 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------------------------+-----------+
+| Name                                                  | Power (W) |
++-------------------------------------------------------+-----------+
+| camera2640_module_v1_0                                |     1.449 |
+|   camera2640_module_v1_0_M_AXIS_1                     |     1.143 |
+|     camera2640_1                                      |     1.143 |
+|       U0_CAMERA2640_INIT                              |     0.959 |
+|         U0_EDGE_DETECTOR                              |     0.023 |
+|         U1_I2C_MASTER                                 |     0.648 |
+|       U1_CAPTURE_FRAME                                |     0.154 |
+|         U0_CAPTURE_START                              |     0.014 |
+|         U1_VSYNC_START                                |     0.020 |
+|         U2_VSYNC_END                                  |     0.021 |
+|         U4_FRAME_FIFO                                 |     0.086 |
+|           U0                                          |     0.086 |
+|             inst_fifo_gen                             |     0.086 |
+|               gconvfifo.rf                            |     0.086 |
+|                 grf.rf                                |     0.086 |
+|                   gntv_or_sync_fifo.gl0.rd            |     0.000 |
+|                     rpntr                             |     0.000 |
+|                   gntv_or_sync_fifo.gl0.wr            |     0.043 |
+|                     gwas.wsts                         |     0.010 |
+|                       c1                              |    <0.001 |
+|                       c2                              |    <0.001 |
+|                     wpntr                             |     0.033 |
+|                   gntv_or_sync_fifo.mem               |     0.043 |
+|                     gbm.gbmg.gbmga.ngecc.bmg          |     0.043 |
+|                       inst_blk_mem_gen                |     0.043 |
+|                         gnativebmg.native_blk_mem_gen |     0.043 |
+|                           valid.cstr                  |     0.043 |
+|                             bindec_a.bindec_inst_a    |     0.002 |
+|                             bindec_b.bindec_inst_b    |     0.000 |
+|                             has_mux_b.B               |     0.000 |
+|                             ramloop[0].ram.r          |     0.033 |
+|                               prim_noinit.ram         |     0.033 |
+|                             ramloop[1].ram.r          |     0.003 |
+|                               prim_noinit.ram         |     0.003 |
+|                             ramloop[2].ram.r          |     0.003 |
+|                               prim_noinit.ram         |     0.003 |
+|                             ramloop[3].ram.r          |     0.002 |
+|                               prim_noinit.ram         |     0.002 |
+|                   rstblk                              |     0.000 |
+|       U2_CAPTURE_START                                |     0.022 |
++-------------------------------------------------------+-----------+
+
+

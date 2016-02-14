@@ -55,6 +55,11 @@ USE ieee.numeric_std.ALL;
 
 ENTITY design_1_camera2640_module_0_0 IS
   PORT (
+    m_axis_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    m_axis_tstrb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    m_axis_tlast : OUT STD_LOGIC;
+    m_axis_tvalid : OUT STD_LOGIC;
+    m_axis_tready : IN STD_LOGIC;
     capture : IN STD_LOGIC;
     sda : INOUT STD_LOGIC;
     scl : INOUT STD_LOGIC;
@@ -63,11 +68,6 @@ ENTITY design_1_camera2640_module_0_0 IS
     pclk : IN STD_LOGIC;
     data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     debug : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    m_axis_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    m_axis_tstrb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    m_axis_tlast : OUT STD_LOGIC;
-    m_axis_tvalid : OUT STD_LOGIC;
-    m_axis_tready : IN STD_LOGIC;
     m_axis_aclk : IN STD_LOGIC;
     m_axis_aresetn : IN STD_LOGIC
   );
@@ -84,6 +84,11 @@ ARCHITECTURE design_1_camera2640_module_0_0_arch OF design_1_camera2640_module_0
       NUMBER_OF_PIXELS : INTEGER
     );
     PORT (
+      m_axis_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      m_axis_tstrb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      m_axis_tlast : OUT STD_LOGIC;
+      m_axis_tvalid : OUT STD_LOGIC;
+      m_axis_tready : IN STD_LOGIC;
       capture : IN STD_LOGIC;
       sda : INOUT STD_LOGIC;
       scl : INOUT STD_LOGIC;
@@ -92,11 +97,6 @@ ARCHITECTURE design_1_camera2640_module_0_0_arch OF design_1_camera2640_module_0
       pclk : IN STD_LOGIC;
       data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       debug : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      m_axis_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      m_axis_tstrb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      m_axis_tlast : OUT STD_LOGIC;
-      m_axis_tvalid : OUT STD_LOGIC;
-      m_axis_tready : IN STD_LOGIC;
       m_axis_aclk : IN STD_LOGIC;
       m_axis_aresetn : IN STD_LOGIC
     );
@@ -117,6 +117,11 @@ BEGIN
       NUMBER_OF_PIXELS => 76800
     )
     PORT MAP (
+      m_axis_tdata => m_axis_tdata,
+      m_axis_tstrb => m_axis_tstrb,
+      m_axis_tlast => m_axis_tlast,
+      m_axis_tvalid => m_axis_tvalid,
+      m_axis_tready => m_axis_tready,
       capture => capture,
       sda => sda,
       scl => scl,
@@ -125,11 +130,6 @@ BEGIN
       pclk => pclk,
       data_in => data_in,
       debug => debug,
-      m_axis_tdata => m_axis_tdata,
-      m_axis_tstrb => m_axis_tstrb,
-      m_axis_tlast => m_axis_tlast,
-      m_axis_tvalid => m_axis_tvalid,
-      m_axis_tready => m_axis_tready,
       m_axis_aclk => m_axis_aclk,
       m_axis_aresetn => m_axis_aresetn
     );

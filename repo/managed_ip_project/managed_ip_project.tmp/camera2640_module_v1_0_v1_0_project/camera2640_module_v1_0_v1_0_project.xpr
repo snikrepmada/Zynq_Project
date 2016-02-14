@@ -6,7 +6,7 @@
 <Project Version="7" Minor="10" Path="g:/zynq_project/repo/managed_ip_project/managed_ip_project.tmp/camera2640_module_v1_0_v1_0_project/camera2640_module_v1_0_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ef27ce73d1964da59453f950d7f990fd"/>
+    <Option Name="Id" Val="57e097eb88034507b2fa3ebef618c58a"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
@@ -15,7 +15,6 @@
     <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
-    <Option Name="TargetLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val="em.avnet.com:zed:part0:1.3"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -45,6 +44,13 @@
       <File Path="$PPRDIR/../../../../hdl/ov2640reg_rom.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../camera2640_module_1.0/src/frame_fifo/frame_fifo.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -102,34 +108,6 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
-    <FileSet Name="frame_fifo" Type="BlockSrcs" RelSrcDir="$PSRCDIR/frame_fifo">
-      <File Path="$PPRDIR/../../../camera2640_module_1.0/src/frame_fifo/frame_fifo.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="frame_fifo.vho"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="frame_fifo.veo"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="frame_fifo.xml"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3.vhd"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="fifo_generator_v13_0_1/simulation/fifo_generator_vhdl_beh.vhd"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="frame_fifo_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="frame_fifo/frame_fifo.xdc"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="doc/fifo_generator_v13_0_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="synth/frame_fifo.vhd"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="fifo_generator_v13_0_1/hdl/fifo_generator_v13_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="frame_fifo/frame_fifo_clocks.xdc"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="sim/frame_fifo.vhd"/>
-        <CompFileExtendedInfo CompFileName="frame_fifo.xci" FileRelPathName="fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_rfs.vhd"/>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="frame_fifo"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -165,46 +143,22 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="frame_fifo_synth_1" Type="Ft3:Synth" SrcSet="frame_fifo" Part="xc7z020clg484-1" ConstrsSet="frame_fifo" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/frame_fifo_synth_1" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
         </StratHandle>
-        <Step Id="synth_design"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-    </Run>
-    <Run Id="frame_fifo_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="frame_fifo" Description="Vivado Implementation Defaults" SynthRun="frame_fifo_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
     </Run>
   </Runs>
 </Project>

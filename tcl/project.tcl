@@ -80,10 +80,11 @@ regenerate_bd_layout
 
 # Create the HDL wrapper
 make_wrapper -files [get_files G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/design_1.bd] -top
-#add_files -norecurse G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-#update_compile_order -fileset sources_1
-#update_compile_order -fileset sim_1
+add_files -norecurse G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
 
-# Save the design and run synthesis
+# Save the design and run synthesis and implementation
 save_bd_design
 launch_runs synth_1 -jobs 2
+launch_runs impl_1 -jobs 2

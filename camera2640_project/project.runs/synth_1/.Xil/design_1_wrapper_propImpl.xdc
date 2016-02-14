@@ -1,9 +1,9 @@
 set_property SRC_FILE_INFO {cfile:g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc rfile:../../../project.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:design_1_i/processing_system7_0/inst} [current_design]
 set_property SRC_FILE_INFO {cfile:g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/frame_fifo/frame_fifo_clocks.xdc rfile:../../../project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/frame_fifo/frame_fifo_clocks.xdc id:2 order:LATE scoped_inst:design_1_i/camera2640_module_0/U0/camera2640_module_v1_0_M_AXIS_1/camera2640_1/U1_CAPTURE_FRAME/U4_FRAME_FIFO/U0} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter clk_fpga_0 0.3
-set_property src_info {type:SCOPED_XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_1 1.25997
+set_property src_info {type:SCOPED_XDC file:1 line:24 export:INPUT save:INPUT read:READ} [current_design]
+set_input_jitter clk_fpga_0 0.3
 set_property src_info {type:SCOPED_XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN "C12" [get_ports "MIO[53]"]
 set_property src_info {type:SCOPED_XDC file:1 line:40 export:INPUT save:INPUT read:READ} [current_design]

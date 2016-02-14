@@ -21,7 +21,6 @@ add_files G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/
 set_property used_in_implementation false [get_files -all g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/frame_fifo/frame_fifo_clocks.xdc]
 set_property used_in_implementation false [get_files -all g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/frame_fifo/frame_fifo.xdc]
-set_property used_in_implementation false [get_files -all g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/frame_fifo_ooc.xdc]
 set_property used_in_implementation false [get_files -all g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc]
 set_property used_in_implementation false [get_files -all g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc]

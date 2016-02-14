@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
---Date        : Sun Feb 14 17:01:04 2016
+--Date        : Sun Feb 14 17:37:01 2016
 --Host        : PerkWinMini running 64-bit Service Pack 1  (build 7601)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1088,8 +1088,6 @@ entity design_1 is
     debug : out STD_LOGIC_VECTOR ( 3 downto 0 );
     href : in STD_LOGIC;
     pclk : in STD_LOGIC;
-    scl : inout STD_LOGIC;
-    sda : inout STD_LOGIC;
     vsync : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
@@ -1231,6 +1229,11 @@ architecture STRUCTURE of design_1 is
   end component design_1_processing_system7_0_0;
   component design_1_camera2640_module_0_0 is
   port (
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axis_tlast : out STD_LOGIC;
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
     capture : in STD_LOGIC;
     sda : inout STD_LOGIC;
     scl : inout STD_LOGIC;
@@ -1239,11 +1242,6 @@ architecture STRUCTURE of design_1 is
     pclk : in STD_LOGIC;
     data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     debug : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axis_tlast : out STD_LOGIC;
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
     m_axis_aclk : in STD_LOGIC;
     m_axis_aresetn : in STD_LOGIC
   );
@@ -1308,8 +1306,6 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_processing_system7_0_100M_0;
-  signal Net : STD_LOGIC;
-  signal Net1 : STD_LOGIC;
   signal axi_dma_0_M_AXI_S2MM_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_dma_0_M_AXI_S2MM_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_dma_0_M_AXI_S2MM_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -1448,6 +1444,8 @@ architecture STRUCTURE of design_1 is
   signal vsync_1 : STD_LOGIC;
   signal NLW_axi_dma_0_s2mm_introut_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dma_0_s2mm_prmry_reset_out_n_UNCONNECTED : STD_LOGIC;
+  signal NLW_camera2640_module_0_scl_UNCONNECTED : STD_LOGIC;
+  signal NLW_camera2640_module_0_sda_UNCONNECTED : STD_LOGIC;
   signal NLW_camera2640_module_0_m_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_ARREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_HP0_RLAST_UNCONNECTED : STD_LOGIC;
@@ -1590,8 +1588,8 @@ camera2640_module_0: component design_1_camera2640_module_0_0
       m_axis_tstrb(3 downto 0) => NLW_camera2640_module_0_m_axis_tstrb_UNCONNECTED(3 downto 0),
       m_axis_tvalid => camera2640_module_0_m_axis_TVALID,
       pclk => pclk_1,
-      scl => scl,
-      sda => sda,
+      scl => NLW_camera2640_module_0_scl_UNCONNECTED,
+      sda => NLW_camera2640_module_0_sda_UNCONNECTED,
       vsync => vsync_1
     );
 processing_system7_0: component design_1_processing_system7_0_0

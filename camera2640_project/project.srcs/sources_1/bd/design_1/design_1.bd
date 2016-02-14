@@ -230,18 +230,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>sda</spirit:name>
-          <spirit:wire>
-            <spirit:direction>inout</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>scl</spirit:name>
-          <spirit:wire>
-            <spirit:direction>inout</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>debug</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
@@ -412,16 +400,6 @@
         <spirit:name>data_in_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="data_in"/>
         <spirit:internalPortReference spirit:componentRef="camera2640_module_0" spirit:portRef="data_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Net</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="camera2640_module_0" spirit:portRef="sda"/>
-        <spirit:externalPortReference spirit:portRef="sda"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Net1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="camera2640_module_0" spirit:portRef="scl"/>
-        <spirit:externalPortReference spirit:portRef="scl"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>camera2640_module_0_debug</spirit:name>
