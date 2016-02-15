@@ -80,3 +80,7 @@
 !*.elf
 !*.bmm
 !*.xmp
+###########
+#Mac files
+###########
+*.DS_Store
