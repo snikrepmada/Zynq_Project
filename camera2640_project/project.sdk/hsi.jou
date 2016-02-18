@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# hsi v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# 
+# Start of session at: Mon Feb 15 20:43:15 2016
+# Process ID: 32726
+# Current directory: /media/sf_git/zynq_project/camera2640_project/project.sdk
+# Command line: hsi -mode tcl
+# Log file: /media/sf_git/zynq_project/camera2640_project/project.sdk/hsi.log
+# Journal file: /media/sf_git/zynq_project/camera2640_project/project.sdk/hsi.jou
+#-----------------------------------------------------------
+open_hw_design design_1_wrapper.hdf 
+set_repo_path /media/sf_git/device-tree-xlnx/
+create_sw_design device-tree -os device_tree -proc ps7_cortexa9_0
+ls
+generate_target -dir system.dtb
+ls
+generate_target -dir system.dts
+ls
