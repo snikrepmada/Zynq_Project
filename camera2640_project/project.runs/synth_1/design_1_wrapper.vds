@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Sun Feb 14 18:55:45 2016
-# Process ID: 3024
+# Start of session at: Thu Feb 25 13:19:36 2016
+# Process ID: 3124
 # Current directory: G:/zynq_project/camera2640_project/project.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: G:/zynq_project/camera2640_project/project.runs/synth_1/design_1_wrapper.vds
@@ -13,7 +13,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'g:/zynq_project/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 265.930 ; gain = 77.492
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 265.871 ; gain = 77.449
 Command: synth_design -top design_1_wrapper -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -21,7 +21,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 WARNING: [Synth 8-992] S_AXI_GP0_ACLK_temp is already implicitly declared earlier [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2701]
 WARNING: [Synth 8-992] S_AXI_GP1_ACLK_temp is already implicitly declared earlier [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:2702]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 356.359 ; gain = 184.648
+Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 357.781 ; gain = 186.211
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:51]
 INFO: [Synth 8-3491] module 'design_1' declared at 'G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1.vhd:1050' bound to instance 'design_1_i' of component 'design_1' [G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:117]
@@ -7920,7 +7920,7 @@ INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2015.4/scripts
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2015.4/scripts/rt/data/unisim_comp.v:17333' bound to instance 'iic_1_sda_iobuf' of component 'IOBUF' [G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:181]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (134#1) [G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:51]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:06:23 ; elapsed = 00:07:05 . Memory (MB): peak = 619.895 ; gain = 448.184
+Finished RTL Elaboration : Time (s): cpu = 00:06:05 ; elapsed = 00:06:51 . Memory (MB): peak = 620.266 ; gain = 448.695
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -8031,10 +8031,10 @@ INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[35] to constant 0
 INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[26] to constant 0 [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/blk_mem_gen_v8_3_1/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd:183803]
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:24 ; elapsed = 00:07:08 . Memory (MB): peak = 619.895 ; gain = 448.184
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:06:06 ; elapsed = 00:06:54 . Memory (MB): peak = 620.266 ; gain = 448.695
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 73 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -8052,9 +8052,9 @@ Parsing XDC File [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/d
 Finished Parsing XDC File [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_board.xdc] for cell 'design_1_i/rst_processing_system7_0_100M'
 Parsing XDC File [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc] for cell 'design_1_i/rst_processing_system7_0_100M'
 Finished Parsing XDC File [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc] for cell 'design_1_i/rst_processing_system7_0_100M'
-Parsing XDC File [G:/zynq_project/camera2640_project/project.srcs/constrs_1/new/camera2640_zedboard_pinmap.xdc]
-Finished Parsing XDC File [G:/zynq_project/camera2640_project/project.srcs/constrs_1/new/camera2640_zedboard_pinmap.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/zynq_project/camera2640_project/project.srcs/constrs_1/new/camera2640_zedboard_pinmap.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Parsing XDC File [G:/zynq_project/constraint/camera2640_zedboard_pinmap.xdc]
+Finished Parsing XDC File [G:/zynq_project/constraint/camera2640_zedboard_pinmap.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/zynq_project/constraint/camera2640_zedboard_pinmap.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [G:/zynq_project/constraint/clk_const.xdc]
 WARNING: [Vivado 12-507] No nets matched 'pclk_IBUF'. [G:/zynq_project/constraint/clk_const.xdc:1]
@@ -8084,16 +8084,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 4 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 779.180 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 779.910 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:06:43 ; elapsed = 00:07:35 . Memory (MB): peak = 779.180 ; gain = 607.469
+Finished Constraint Validation : Time (s): cpu = 00:06:24 ; elapsed = 00:07:19 . Memory (MB): peak = 779.910 ; gain = 608.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:06:43 ; elapsed = 00:07:35 . Memory (MB): peak = 779.180 ; gain = 607.469
+Finished Loading Part and Timing Information : Time (s): cpu = 00:06:24 ; elapsed = 00:07:19 . Memory (MB): peak = 779.910 ; gain = 608.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -8114,7 +8114,7 @@ Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_p
 Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:06:44 ; elapsed = 00:07:36 . Memory (MB): peak = 779.180 ; gain = 607.469
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:06:25 ; elapsed = 00:07:20 . Memory (MB): peak = 779.910 ; gain = 608.340
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'GEN_SYNC_WRITE.rst_wvalid_re_reg' into 'GEN_SYNC_WRITE.bvalid_i_reg' [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ipshared/xilinx.com/axi_dma_v7_1/hdl/src/vhdl/axi_dma_lite_if.vhd:271]
 INFO: [Synth 8-4471] merging register 'GEN_SYNC_READ.rst_rvalid_re_reg' into 'GEN_SYNC_READ.s_axi_lite_rvalid_i_reg' [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ipshared/xilinx.com/axi_dma_v7_1/hdl/src/vhdl/axi_dma_lite_if.vhd:1042]
@@ -8228,7 +8228,7 @@ INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [g:/z
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'frame_state_reg' using encoding 'sequential' in module 'capture_frame'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:06:52 ; elapsed = 00:07:46 . Memory (MB): peak = 779.180 ; gain = 607.469
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:06:33 ; elapsed = 00:07:30 . Memory (MB): peak = 779.910 ; gain = 608.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -9384,7 +9384,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:06:53 ; elapsed = 00:07:47 . Memory (MB): peak = 779.180 ; gain = 607.469
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:06:34 ; elapsed = 00:07:31 . Memory (MB): peak = 779.910 ; gain = 608.340
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -9456,9 +9456,9 @@ INFO: [Synth 8-5545] ROM "U0/camera2640_module_v1_0_M_AXIS_1/axis_tlast" won't b
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ipshared/xilinx.com/axi_register_slice_v2_1/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:06:57 ; elapsed = 00:07:51 . Memory (MB): peak = 779.180 ; gain = 607.469
+Finished Cross Boundary Optimization : Time (s): cpu = 00:06:37 ; elapsed = 00:07:35 . Memory (MB): peak = 779.910 ; gain = 608.340
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:06:57 ; elapsed = 00:07:51 . Memory (MB): peak = 779.180 ; gain = 607.469
+Finished Parallel Reinference  : Time (s): cpu = 00:06:37 ; elapsed = 00:07:35 . Memory (MB): peak = 779.910 ; gain = 608.340
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -9495,9 +9495,9 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:07:09 ; elapsed = 00:08:06 . Memory (MB): peak = 779.180 ; gain = 607.469
+Finished Area Optimization : Time (s): cpu = 00:06:51 ; elapsed = 00:07:49 . Memory (MB): peak = 779.910 ; gain = 608.340
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:07:10 ; elapsed = 00:08:06 . Memory (MB): peak = 779.180 ; gain = 607.469
+Finished Parallel Area Optimization  : Time (s): cpu = 00:06:51 ; elapsed = 00:07:49 . Memory (MB): peak = 779.910 ; gain = 608.340
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -9511,10 +9511,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:07:23 ; elapsed = 00:08:20 . Memory (MB): peak = 893.922 ; gain = 722.211
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:07:03 ; elapsed = 00:08:02 . Memory (MB): peak = 895.988 ; gain = 724.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:07:27 ; elapsed = 00:08:23 . Memory (MB): peak = 946.625 ; gain = 774.914
+Finished Timing Optimization : Time (s): cpu = 00:07:07 ; elapsed = 00:08:06 . Memory (MB): peak = 947.441 ; gain = 775.871
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -9627,16 +9627,16 @@ INFO: [Synth 8-3332] Sequential element (\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM
 INFO: [Synth 8-3332] Sequential element (\INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_LESS_23.cmnd_data_reg[67] ) is unused and will be removed from module axi_dma.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:07:31 ; elapsed = 00:08:31 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished Technology Mapping : Time (s): cpu = 00:07:12 ; elapsed = 00:08:12 . Memory (MB): peak = 949.445 ; gain = 777.875
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:07:31 ; elapsed = 00:08:31 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:07:12 ; elapsed = 00:08:12 . Memory (MB): peak = 949.445 ; gain = 777.875
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:07:31 ; elapsed = 00:08:31 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:07:12 ; elapsed = 00:08:12 . Memory (MB): peak = 949.445 ; gain = 777.875
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -9770,7 +9770,7 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [g:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/ipshared/xilinx.com/axi_dwidth_converter_v2_1/hdl/verilog/axi_dwidth_converter_v2_1_w_upsizer.v:1116]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:07:33 ; elapsed = 00:08:33 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished IO Insertion : Time (s): cpu = 00:07:14 ; elapsed = 00:08:14 . Memory (MB): peak = 949.445 ; gain = 777.875
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -9783,7 +9783,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:07:33 ; elapsed = 00:08:33 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:14 ; elapsed = 00:08:14 . Memory (MB): peak = 949.445 ; gain = 777.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -9797,25 +9797,25 @@ Start Rebuilding User Hierarchy
 WARNING: [Synth 8-115] binding instance 'i_0' in module 'fifo_generator_v13_0_1_synth' to reference 'reset_blk_ramfifo_29' which has no pins
 WARNING: [Synth 8-115] binding instance 'i_0' in module 'fifo_generator_v13_0_1_synth__parameterized0' to reference 'reset_blk_ramfifo__parameterized1' which has no pins
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:34 ; elapsed = 00:08:34 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:15 ; elapsed = 00:08:15 . Memory (MB): peak = 949.445 ; gain = 777.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:07:34 ; elapsed = 00:08:34 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:15 ; elapsed = 00:08:15 . Memory (MB): peak = 949.445 ; gain = 777.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:07:35 ; elapsed = 00:08:35 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:16 ; elapsed = 00:08:16 . Memory (MB): peak = 949.445 ; gain = 777.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:07:35 ; elapsed = 00:08:35 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished Renaming Generated Nets : Time (s): cpu = 00:07:16 ; elapsed = 00:08:16 . Memory (MB): peak = 949.445 ; gain = 777.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -10136,11 +10136,11 @@ Report Instance Areas:
 |246   |          SEQ_COUNTER                                               |upcnt_n                                                              |    14|
 +------+--------------------------------------------------------------------+---------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:07:35 ; elapsed = 00:08:35 . Memory (MB): peak = 948.793 ; gain = 777.082
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:16 ; elapsed = 00:08:16 . Memory (MB): peak = 949.445 ; gain = 777.875
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 308 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:07:49 . Memory (MB): peak = 948.793 ; gain = 519.578
-Synthesis Optimization Complete : Time (s): cpu = 00:07:35 ; elapsed = 00:08:35 . Memory (MB): peak = 948.793 ; gain = 777.082
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:07:31 . Memory (MB): peak = 949.445 ; gain = 514.988
+Synthesis Optimization Complete : Time (s): cpu = 00:07:16 ; elapsed = 00:08:16 . Memory (MB): peak = 949.445 ; gain = 777.875
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 165 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -10157,6 +10157,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 1104 Infos, 196 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:07:34 ; elapsed = 00:08:24 . Memory (MB): peak = 948.793 ; gain = 682.863
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 948.793 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Feb 14 19:04:28 2016...
+synth_design: Time (s): cpu = 00:07:14 ; elapsed = 00:08:05 . Memory (MB): peak = 949.445 ; gain = 683.574
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 949.445 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 25 13:28:00 2016...
