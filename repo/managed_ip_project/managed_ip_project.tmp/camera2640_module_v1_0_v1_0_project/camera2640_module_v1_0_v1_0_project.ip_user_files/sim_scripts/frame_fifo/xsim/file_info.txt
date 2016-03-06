@@ -1,4 +1,0 @@
-Language File-Name                     IP          Library                 File-Path                                                                      
-VHDL,    fifo_generator_vhdl_beh.vhd,  frame_fifo, fifo_generator_v13_0_1, ../../../ipstatic/fifo_generator_v13_0_1/simulation/fifo_generator_vhdl_beh.vhd
-VHDL,    fifo_generator_v13_0_rfs.vhd, frame_fifo, fifo_generator_v13_0_1, ../../../ipstatic/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_rfs.vhd      
-VHDL,    frame_fifo.vhd,               frame_fifo, xil_defaultlib,         ../../../../../../../camera2640_module_1.0/src/frame_fifo/sim/frame_fifo.vhd   

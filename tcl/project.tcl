@@ -7,12 +7,12 @@
 ################################################################################
 
 # Create project to interface camera module
-create_project project G:/zynq_project/camera2640_project -part xc7z020clg484-1
+create_project camera2640_project vivado -part xc7z020clg484-1
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
 set_property target_language VHDL [current_project]
 
 # Add the IP repo for the custom camera module
-set_property  ip_repo_paths  G:/zynq_project/repo [current_project]
+set_property  ip_repo_paths ip_repo [current_project]
 update_ip_catalog
 
 # Create the block digram to build the project
@@ -34,7 +34,7 @@ endgroup
 
 # Add the custom camera module
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:user:camera2640_module:1.0 camera2640_module_0
+create_bd_cell -type ip -vlnv Perkins:user:camera2640_module:1.0 camera2640_module_0
 endgroup
 
 # Add the DMA, configure, and run block automation
@@ -79,10 +79,14 @@ endgroup
 regenerate_bd_layout
 
 # Create the HDL wrapper
-make_wrapper -files [get_files G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse G:/zynq_project/camera2640_project/project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper -files [get_files vivado/camera2640_project.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse vivado/camera2640_project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
+
+# Import the needed contraint files
+add_files -fileset constrs_1 -norecurse {constraint/camera2640_zedboard_pinmap.xdc constraint/clk_const.xdc}
+import_files -fileset constrs_1 {constraint/camera2640_zedboard_pinmap.xdc constraint/clk_const.xdc}
 
 # Save the design and run synthesis and implementation
 save_bd_design

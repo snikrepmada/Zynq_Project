@@ -1,5 +1,0 @@
-vhdl fifo_generator_v13_0_1 "../../../ipstatic/fifo_generator_v13_0_1/simulation/fifo_generator_vhdl_beh.vhd" 
-vhdl fifo_generator_v13_0_1 "../../../ipstatic/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_rfs.vhd" 
-vhdl xil_defaultlib "../../../../../../../camera2640_module_1.0/src/frame_fifo/sim/frame_fifo.vhd" 
-
-nosort
