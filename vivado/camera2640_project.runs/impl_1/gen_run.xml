@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1457223958">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1457452176">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="design_1_wrapper.vdi"/>
   <File Type="BG-DRC" Name="design_1_wrapper.drc"/>
@@ -77,18 +77,10 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/constraint/camera2640_zedboard_pinmap.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/new/zedboard_custom_pins.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../constraint/camera2640_zedboard_pinmap.xdc"/>
-        <Attr Name="ImportTime" Val="1456000951"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/constrs_1/imports/constraint/clk_const.xdc">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../constraint/clk_const.xdc"/>
-        <Attr Name="ImportTime" Val="1455493976"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/camera2640_project_io.srcs/constrs_1/new/zedboard_custom_pins.xdc"/>
+        <Attr Name="ImportTime" Val="1457290210"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -98,9 +90,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-      <Desc>Vivado Implementation Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

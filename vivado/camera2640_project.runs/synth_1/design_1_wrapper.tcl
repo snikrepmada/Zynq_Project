@@ -9,37 +9,41 @@ create_project -in_memory -part xc7z020clg484-1
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/ap/projects/camera_project/vivado/camera2640_project.cache/wt [current_project]
-set_property parent.project_path /home/ap/projects/camera_project/vivado/camera2640_project.xpr [current_project]
+set_property webtalk.parent_dir /home/ap/projects/zynq_project/vivado/camera2640_project.cache/wt [current_project]
+set_property parent.project_path /home/ap/projects/zynq_project/vivado/camera2640_project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-set_property ip_repo_paths /home/ap/projects/camera_project/ip_repo [current_project]
 set_property vhdl_version vhdl_2k [current_fileset]
-add_files /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/frame_fifo/frame_fifo_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_camera2640_module_0_0/src/frame_fifo/frame_fifo/frame_fifo.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
-set_property is_locked true [get_files /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/design_1.bd]
+add_files /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/design_1_v_tpg_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/design_1_v_tpg_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_rst_processing_system7_0_100M_0/design_1_rst_processing_system7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+set_property is_locked true [get_files /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/design_1.bd]
 
-read_vhdl -library xil_defaultlib /home/ap/projects/camera_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-read_xdc /home/ap/projects/camera_project/vivado/camera2640_project.srcs/constrs_1/imports/constraint/camera2640_zedboard_pinmap.xdc
-set_property used_in_implementation false [get_files /home/ap/projects/camera_project/vivado/camera2640_project.srcs/constrs_1/imports/constraint/camera2640_zedboard_pinmap.xdc]
-
-read_xdc /home/ap/projects/camera_project/vivado/camera2640_project.srcs/constrs_1/imports/constraint/clk_const.xdc
-set_property used_in_implementation false [get_files /home/ap/projects/camera_project/vivado/camera2640_project.srcs/constrs_1/imports/constraint/clk_const.xdc]
+read_vhdl -library xil_defaultlib /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+read_xdc /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/constrs_1/imports/new/zedboard_custom_pins.xdc
+set_property used_in_implementation false [get_files /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/constrs_1/imports/new/zedboard_custom_pins.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
+compile_c [get_files /home/ap/projects/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/design_1.bd
+]
 synth_design -top design_1_wrapper -part xc7z020clg484-1
 write_checkpoint -noxdef design_1_wrapper.dcp
 catch { report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb }

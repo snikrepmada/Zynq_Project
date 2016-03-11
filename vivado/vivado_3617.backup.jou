@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sun Mar  6 11:45:08 2016
+# Process ID: 3617
+# Current directory: /media/sf_git/zynq_project/vivado
+# Command line: vivado
+# Log file: /media/sf_git/zynq_project/vivado/vivado.log
+# Journal file: /media/sf_git/zynq_project/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /media/sf_git/zynq_project/vivado/camera2640_project.xpr
+open_bd_design {/media/sf_git/zynq_project/vivado/camera2640_project.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_tpg:7.0 v_tpg_0
+endgroup
+set_property location {1.5 722 333} [get_bd_cells v_tpg_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/axi_vdma_0/M_AXI_MM2S" Clk "Auto" }  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins axi_vdma_0/S_AXI_LITE]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins v_tpg_0/s_axi_CTRL]
+endgroup
+set_property location {1 303 492} [get_bd_cells axi_vdma_0]
+set_property location {1.5 559 263} [get_bd_cells axi_vdma_0]
+startgroup
+set_property -dict [list CONFIG.c_s2mm_linebuffer_depth {2048} CONFIG.c_include_mm2s {0} CONFIG.c_mm2s_genlock_mode {0}] [get_bd_cells axi_vdma_0]
+delete_bd_objs [get_bd_intf_nets axi_vdma_0_M_AXI_MM2S]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins v_tpg_0/m_axis_video] [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM]
+save_bd_design
+close_bd_design [get_bd_designs design_1]
+close_project

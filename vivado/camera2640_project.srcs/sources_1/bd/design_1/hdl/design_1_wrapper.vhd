@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
---Date        : Sat Mar  5 19:24:58 2016
+--Date        : Tue Mar  8 10:48:32 2016
 --Host        : Ubuntu14VM running 64-bit Ubuntu 14.04.4 LTS
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -34,17 +34,12 @@ entity design_1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    XCLK : out STD_LOGIC;
-    capture : in STD_LOGIC;
-    data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    debug : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    href : in STD_LOGIC;
     iic_0_scl_io : inout STD_LOGIC;
     iic_0_sda_io : inout STD_LOGIC;
     iic_1_scl_io : inout STD_LOGIC;
     iic_1_sda_io : inout STD_LOGIC;
-    pclk : in STD_LOGIC;
-    vsync : in STD_LOGIC
+    xclk0 : out STD_LOGIC;
+    xclk1 : out STD_LOGIC
   );
 end design_1_wrapper;
 
@@ -84,13 +79,8 @@ architecture STRUCTURE of design_1_wrapper is
     IIC_1_scl_i : in STD_LOGIC;
     IIC_1_scl_o : out STD_LOGIC;
     IIC_1_scl_t : out STD_LOGIC;
-    capture : in STD_LOGIC;
-    vsync : in STD_LOGIC;
-    href : in STD_LOGIC;
-    pclk : in STD_LOGIC;
-    data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    debug : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    XCLK : out STD_LOGIC
+    xclk0 : out STD_LOGIC;
+    xclk1 : out STD_LOGIC
   );
   end component design_1;
   component IOBUF is
@@ -149,13 +139,8 @@ design_1_i: component design_1
       IIC_1_sda_i => iic_1_sda_i,
       IIC_1_sda_o => iic_1_sda_o,
       IIC_1_sda_t => iic_1_sda_t,
-      XCLK => XCLK,
-      capture => capture,
-      data_in(7 downto 0) => data_in(7 downto 0),
-      debug(3 downto 0) => debug(3 downto 0),
-      href => href,
-      pclk => pclk,
-      vsync => vsync
+      xclk0 => xclk0,
+      xclk1 => xclk1
     );
 iic_0_scl_iobuf: component IOBUF
      port map (

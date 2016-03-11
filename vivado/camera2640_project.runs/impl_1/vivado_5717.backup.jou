@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sun Mar  6 14:13:55 2016
+# Process ID: 5717
+# Current directory: /media/sf_git/zynq_project/vivado/camera2640_project.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /media/sf_git/zynq_project/vivado/camera2640_project.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /media/sf_git/zynq_project/vivado/camera2640_project.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

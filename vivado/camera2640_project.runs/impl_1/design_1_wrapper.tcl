@@ -49,7 +49,7 @@ start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   open_checkpoint design_1_wrapper_routed.dcp
-  set_property webtalk.parent_dir /home/ap/projects/camera_project/vivado/camera2640_project.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/ap/projects/zynq_project/vivado/camera2640_project.cache/wt [current_project]
   catch { write_mem_info -force design_1_wrapper.mmi }
   write_bitstream -force design_1_wrapper.bit 
   catch { write_sysdef -hwdef design_1_wrapper.hwdef -bitfile design_1_wrapper.bit -meminfo design_1_wrapper.mmi -file design_1_wrapper.sysdef }

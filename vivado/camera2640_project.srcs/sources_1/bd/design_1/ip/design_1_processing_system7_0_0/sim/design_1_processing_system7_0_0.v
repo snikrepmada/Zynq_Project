@@ -158,11 +158,9 @@ S_AXI_HP0_AWID,
 S_AXI_HP0_WID, 
 S_AXI_HP0_WDATA, 
 S_AXI_HP0_WSTRB, 
-IRQ_F2P, 
-Core0_nFIQ, 
-Core1_nFIQ, 
 FCLK_CLK0, 
 FCLK_CLK1, 
+FCLK_CLK2, 
 FCLK_RESET0_N, 
 MIO, 
 DDR_CAS_n, 
@@ -253,7 +251,7 @@ output [1 : 0] S_AXI_HP0_BRESP;
 output [1 : 0] S_AXI_HP0_RRESP;
 output [5 : 0] S_AXI_HP0_BID;
 output [5 : 0] S_AXI_HP0_RID;
-output [31 : 0] S_AXI_HP0_RDATA;
+output [63 : 0] S_AXI_HP0_RDATA;
 output [7 : 0] S_AXI_HP0_RCOUNT;
 output [7 : 0] S_AXI_HP0_WCOUNT;
 output [2 : 0] S_AXI_HP0_RACOUNT;
@@ -286,13 +284,11 @@ input [3 : 0] S_AXI_HP0_AWQOS;
 input [5 : 0] S_AXI_HP0_ARID;
 input [5 : 0] S_AXI_HP0_AWID;
 input [5 : 0] S_AXI_HP0_WID;
-input [31 : 0] S_AXI_HP0_WDATA;
-input [3 : 0] S_AXI_HP0_WSTRB;
-input [0 : 0] IRQ_F2P;
-input Core0_nFIQ;
-input Core1_nFIQ;
+input [63 : 0] S_AXI_HP0_WDATA;
+input [7 : 0] S_AXI_HP0_WSTRB;
 output FCLK_CLK0;
 output FCLK_CLK1;
+output FCLK_CLK2;
 output FCLK_RESET0_N;
 input [53 : 0] MIO;
 input DDR_CAS_n;
@@ -326,14 +322,14 @@ input PS_PORB;
     .C_USE_S_AXI_HP1(0),
     .C_USE_S_AXI_HP2(0),
     .C_USE_S_AXI_HP3(0),
-    .C_S_AXI_HP0_DATA_WIDTH(32),
+    .C_S_AXI_HP0_DATA_WIDTH(64),
     .C_S_AXI_HP1_DATA_WIDTH(64),
     .C_S_AXI_HP2_DATA_WIDTH(64),
     .C_S_AXI_HP3_DATA_WIDTH(64),
     .C_HIGH_OCM_EN(0),
     .C_FCLK_CLK0_FREQ(100.0),
-    .C_FCLK_CLK1_FREQ(23.809525),
-    .C_FCLK_CLK2_FREQ(50.0),
+    .C_FCLK_CLK1_FREQ(24.390244),
+    .C_FCLK_CLK2_FREQ(24.390244),
     .C_FCLK_CLK3_FREQ(50.0),
 	.C_M_AXI_GP0_ENABLE_STATIC_REMAP(0),
 	.C_M_AXI_GP1_ENABLE_STATIC_REMAP(0),
@@ -697,14 +693,14 @@ input PS_PORB;
 	
     .FCLK_CLK1(FCLK_CLK1),
 	
-    .FCLK_CLK2(),
+    .FCLK_CLK2(FCLK_CLK2),
 	
     .FCLK_CLK3(),
     .FCLK_RESET0_N(FCLK_RESET0_N),
     .FCLK_RESET1_N(),
     .FCLK_RESET2_N(),
     .FCLK_RESET3_N(),
-    .IRQ_F2P(IRQ_F2P),
+    .IRQ_F2P(16'B0),
     .PS_SRSTB(PS_SRSTB),
     .PS_CLK(PS_CLK),
     .PS_PORB(PS_PORB)

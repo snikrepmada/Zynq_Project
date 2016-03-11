@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "processing_system7_v5_5_processing_system7,Vivado 2015.4" *)
 (* CHECK_LICENSE_TYPE = "design_1_processing_system7_0_0,processing_system7_v5_5_processing_system7,{}" *)
-(* CORE_GENERATION_INFO = "design_1_processing_system7_0_0,processing_system7_v5_5_processing_system7,{x_ipProduct=Vivado 2015.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=processing_system7,x_ipVersion=5.5,x_ipCoreRevision=3,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_EN_EMIO_PJTAG=0,C_EN_EMIO_ENET0=0,C_EN_EMIO_ENET1=0,C_EN_EMIO_TRACE=0,C_INCLUDE_TRACE_BUFFER=0,C_TRACE_BUFFER_FIFO_SIZE=128,USE_TRACE_DATA_EDGE_DETECTOR=0,C_TRACE_PIPELINE_WIDTH=8,C_TRACE_BUFFER_CLOCK_DELAY=12,C_EMIO_GPIO_WIDTH=64,C_INCLUDE_ACP_TRANS_CHECK=0,C_USE_DEFAULT_ACP_USER_VAL=0,C_S_AXI_ACP_ARUSER_VAL=31,C_S_AXI_ACP_AWUSER_VAL=31,C_M_AXI_GP0_ID_WIDTH=12,C_M_AXI_GP0_ENABLE_STATIC_REMAP=0,C_M_AXI_GP1_ID_WIDTH=12,C_M_AXI_GP1_ENABLE_STATIC_REMAP=0,C_S_AXI_GP0_ID_WIDTH=6,C_S_AXI_GP1_ID_WIDTH=6,C_S_AXI_ACP_ID_WIDTH=3,C_S_AXI_HP0_ID_WIDTH=6,C_S_AXI_HP0_DATA_WIDTH=32,C_S_AXI_HP1_ID_WIDTH=6,C_S_AXI_HP1_DATA_WIDTH=64,C_S_AXI_HP2_ID_WIDTH=6,C_S_AXI_HP2_DATA_WIDTH=64,C_S_AXI_HP3_ID_WIDTH=6,C_S_AXI_HP3_DATA_WIDTH=64,C_M_AXI_GP0_THREAD_ID_WIDTH=12,C_M_AXI_GP1_THREAD_ID_WIDTH=12,C_NUM_F2P_INTR_INPUTS=1,C_IRQ_F2P_MODE=DIRECT,C_DQ_WIDTH=32,C_DQS_WIDTH=4,C_DM_WIDTH=4,C_MIO_PRIMITIVE=54,C_TRACE_INTERNAL_WIDTH=2,C_USE_AXI_NONSECURE=0,C_USE_M_AXI_GP0=1,C_USE_M_AXI_GP1=0,C_USE_S_AXI_GP0=0,C_USE_S_AXI_HP0=1,C_USE_S_AXI_HP1=0,C_USE_S_AXI_HP2=0,C_USE_S_AXI_HP3=0,C_USE_S_AXI_ACP=0,C_PS7_SI_REV=PRODUCTION,C_FCLK_CLK0_BUF=true,C_FCLK_CLK1_BUF=true,C_FCLK_CLK2_BUF=false,C_FCLK_CLK3_BUF=false,C_PACKAGE_NAME=clg484}" *)
+(* CORE_GENERATION_INFO = "design_1_processing_system7_0_0,processing_system7_v5_5_processing_system7,{x_ipProduct=Vivado 2015.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=processing_system7,x_ipVersion=5.5,x_ipCoreRevision=3,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_EN_EMIO_PJTAG=0,C_EN_EMIO_ENET0=0,C_EN_EMIO_ENET1=0,C_EN_EMIO_TRACE=0,C_INCLUDE_TRACE_BUFFER=0,C_TRACE_BUFFER_FIFO_SIZE=128,USE_TRACE_DATA_EDGE_DETECTOR=0,C_TRACE_PIPELINE_WIDTH=8,C_TRACE_BUFFER_CLOCK_DELAY=12,C_EMIO_GPIO_WIDTH=64,C_INCLUDE_ACP_TRANS_CHECK=0,C_USE_DEFAULT_ACP_USER_VAL=0,C_S_AXI_ACP_ARUSER_VAL=31,C_S_AXI_ACP_AWUSER_VAL=31,C_M_AXI_GP0_ID_WIDTH=12,C_M_AXI_GP0_ENABLE_STATIC_REMAP=0,C_M_AXI_GP1_ID_WIDTH=12,C_M_AXI_GP1_ENABLE_STATIC_REMAP=0,C_S_AXI_GP0_ID_WIDTH=6,C_S_AXI_GP1_ID_WIDTH=6,C_S_AXI_ACP_ID_WIDTH=3,C_S_AXI_HP0_ID_WIDTH=6,C_S_AXI_HP0_DATA_WIDTH=64,C_S_AXI_HP1_ID_WIDTH=6,C_S_AXI_HP1_DATA_WIDTH=64,C_S_AXI_HP2_ID_WIDTH=6,C_S_AXI_HP2_DATA_WIDTH=64,C_S_AXI_HP3_ID_WIDTH=6,C_S_AXI_HP3_DATA_WIDTH=64,C_M_AXI_GP0_THREAD_ID_WIDTH=12,C_M_AXI_GP1_THREAD_ID_WIDTH=12,C_NUM_F2P_INTR_INPUTS=1,C_IRQ_F2P_MODE=DIRECT,C_DQ_WIDTH=32,C_DQS_WIDTH=4,C_DM_WIDTH=4,C_MIO_PRIMITIVE=54,C_TRACE_INTERNAL_WIDTH=2,C_USE_AXI_NONSECURE=0,C_USE_M_AXI_GP0=1,C_USE_M_AXI_GP1=0,C_USE_S_AXI_GP0=0,C_USE_S_AXI_HP0=1,C_USE_S_AXI_HP1=0,C_USE_S_AXI_HP2=0,C_USE_S_AXI_HP3=0,C_USE_S_AXI_ACP=0,C_PS7_SI_REV=PRODUCTION,C_FCLK_CLK0_BUF=true,C_FCLK_CLK1_BUF=true,C_FCLK_CLK2_BUF=true,C_FCLK_CLK3_BUF=false,C_PACKAGE_NAME=clg484}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_processing_system7_0_0 (
   I2C0_SDA_I,
@@ -157,11 +157,9 @@ module design_1_processing_system7_0_0 (
   S_AXI_HP0_WID,
   S_AXI_HP0_WDATA,
   S_AXI_HP0_WSTRB,
-  IRQ_F2P,
-  Core0_nFIQ,
-  Core1_nFIQ,
   FCLK_CLK0,
   FCLK_CLK1,
+  FCLK_CLK2,
   FCLK_RESET0_N,
   MIO,
   DDR_CAS_n,
@@ -318,7 +316,7 @@ output wire [5 : 0] S_AXI_HP0_BID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0 RID" *)
 output wire [5 : 0] S_AXI_HP0_RID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0 RDATA" *)
-output wire [31 : 0] S_AXI_HP0_RDATA;
+output wire [63 : 0] S_AXI_HP0_RDATA;
 (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:hpstatusctrl:1.0 S_AXI_HP0_FIFO_CTRL RCOUNT" *)
 output wire [7 : 0] S_AXI_HP0_RCOUNT;
 (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:hpstatusctrl:1.0 S_AXI_HP0_FIFO_CTRL WCOUNT" *)
@@ -384,19 +382,15 @@ input wire [5 : 0] S_AXI_HP0_AWID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0 WID" *)
 input wire [5 : 0] S_AXI_HP0_WID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0 WDATA" *)
-input wire [31 : 0] S_AXI_HP0_WDATA;
+input wire [63 : 0] S_AXI_HP0_WDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP0 WSTRB" *)
-input wire [3 : 0] S_AXI_HP0_WSTRB;
-(* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 IRQ_F2P INTERRUPT" *)
-input wire [0 : 0] IRQ_F2P;
-(* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 Core0_nFIQ INTERRUPT" *)
-input wire Core0_nFIQ;
-(* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 Core1_nFIQ INTERRUPT" *)
-input wire Core1_nFIQ;
+input wire [7 : 0] S_AXI_HP0_WSTRB;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *)
 output wire FCLK_CLK0;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK1 CLK" *)
 output wire FCLK_CLK1;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK2 CLK" *)
+output wire FCLK_CLK2;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FCLK_RESET0_N RST" *)
 output wire FCLK_RESET0_N;
 (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO" *)
@@ -465,7 +459,7 @@ inout wire PS_PORB;
     .C_S_AXI_GP1_ID_WIDTH(6),
     .C_S_AXI_ACP_ID_WIDTH(3),
     .C_S_AXI_HP0_ID_WIDTH(6),
-    .C_S_AXI_HP0_DATA_WIDTH(32),
+    .C_S_AXI_HP0_DATA_WIDTH(64),
     .C_S_AXI_HP1_ID_WIDTH(6),
     .C_S_AXI_HP1_DATA_WIDTH(64),
     .C_S_AXI_HP2_ID_WIDTH(6),
@@ -493,7 +487,7 @@ inout wire PS_PORB;
     .C_PS7_SI_REV("PRODUCTION"),
     .C_FCLK_CLK0_BUF("true"),
     .C_FCLK_CLK1_BUF("true"),
-    .C_FCLK_CLK2_BUF("false"),
+    .C_FCLK_CLK2_BUF("true"),
     .C_FCLK_CLK3_BUF("false"),
     .C_PACKAGE_NAME("clg484")
   ) inst (
@@ -1071,10 +1065,10 @@ inout wire PS_PORB;
     .IRQ_P2F_SPI1(),
     .IRQ_P2F_UART1(),
     .IRQ_P2F_CAN1(),
-    .IRQ_F2P(IRQ_F2P),
-    .Core0_nFIQ(Core0_nFIQ),
+    .IRQ_F2P(1'B0),
+    .Core0_nFIQ(1'B0),
     .Core0_nIRQ(1'B0),
-    .Core1_nFIQ(Core1_nFIQ),
+    .Core1_nFIQ(1'B0),
     .Core1_nIRQ(1'B0),
     .DMA0_DATYPE(),
     .DMA0_DAVALID(),
@@ -1110,7 +1104,7 @@ inout wire PS_PORB;
     .DMA3_DRTYPE(2'B0),
     .FCLK_CLK0(FCLK_CLK0),
     .FCLK_CLK1(FCLK_CLK1),
-    .FCLK_CLK2(),
+    .FCLK_CLK2(FCLK_CLK2),
     .FCLK_CLK3(),
     .FCLK_CLKTRIG0_N(1'B0),
     .FCLK_CLKTRIG1_N(1'B0),

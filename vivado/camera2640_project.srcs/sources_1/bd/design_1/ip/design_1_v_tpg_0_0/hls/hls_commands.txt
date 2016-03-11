@@ -1,0 +1,6 @@
+
+config_rtl -form_dsp
+config_schedule -verbose
+
+set_directive_interface -mode axis -register v_tpg m_axis_video 
+config_interface -output_reg_mode both

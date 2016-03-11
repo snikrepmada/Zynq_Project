@@ -1,0 +1,93 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sun Mar  6 13:23:09 2016
+# Process ID: 4921
+# Current directory: /media/sf_git/zynq_project/vivado
+# Command line: vivado
+# Log file: /media/sf_git/zynq_project/vivado/vivado.log
+# Journal file: /media/sf_git/zynq_project/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /media/sf_git/zynq_project/vivado/camera2640_project.xpr
+close_project
+open_project /media/sf_git/zynq_project/vivado/camera2640_project.xpr
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+close_project
+create_project camera2640_project_io . -part xc7z020clg484-1
+set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
+set_property design_mode PinPlanning [current_fileset]
+open_io_design -name io_1
+set_property target_language VHDL [current_project]
+close_project
+open_project /media/sf_git/zynq_project/vivado/camera2640_project.xpr
+close_project
+open_project /media/sf_git/zynq_project/vivado/camera2640_project_io.xpr
+open_io_design -name io_1
+startgroup
+create_port iic_0_scl_io -direction inout
+set_property iostandard LVCMOS33 [get_ports [list iic_0_scl_io]]
+set_property drive 12 [get_ports [list iic_0_scl_io]]
+set_property slew SLOW [get_ports [list iic_0_scl_io]]
+set_property pulltype PULLUP [get_ports [list iic_0_scl_io]]
+endgroup
+startgroup
+create_port iic_0_sda_io -direction inout
+set_property iostandard LVCMOS33 [get_ports [list iic_0_sda_io]]
+set_property drive 12 [get_ports [list iic_0_sda_io]]
+set_property slew SLOW [get_ports [list iic_0_sda_io]]
+set_property pulltype PULLUP [get_ports [list iic_0_sda_io]]
+endgroup
+startgroup
+create_port iic_1_scl_io -direction inout
+set_property iostandard LVCMOS33 [get_ports [list iic_1_scl_io]]
+set_property drive 12 [get_ports [list iic_1_scl_io]]
+set_property slew SLOW [get_ports [list iic_1_scl_io]]
+set_property pulltype PULLUP [get_ports [list iic_1_scl_io]]
+endgroup
+startgroup
+create_port iic_1_sda_io -direction inout
+set_property iostandard LVCMOS33 [get_ports [list iic_1_sda_io]]
+set_property drive 12 [get_ports [list iic_1_sda_io]]
+set_property slew SLOW [get_ports [list iic_1_sda_io]]
+set_property pulltype PULLUP [get_ports [list iic_1_sda_io]]
+endgroup
+startgroup
+create_port xclk0 -direction out
+set_property iostandard LVCMOS33 [get_ports [list xclk0]]
+set_property drive 12 [get_ports [list xclk0]]
+set_property slew FAST [get_ports [list xclk0]]
+set_property pulltype NONE [get_ports [list xclk0]]
+endgroup
+startgroup
+create_port xclk1 -direction out
+set_property iostandard LVCMOS33 [get_ports [list xclk1]]
+set_property drive 12 [get_ports [list xclk1]]
+set_property slew FAST [get_ports [list xclk1]]
+set_property pulltype NONE [get_ports [list xclk1]]
+endgroup
+place_ports iic_0_scl_io Y11
+place_ports iic_0_sda_io AA11
+place_ports iic_1_scl_io Y10
+place_ports iic_1_sda_io AA9
+place_ports xclk0 AB11
+place_ports xclk1 AB10
+file mkdir /media/sf_git/zynq_project/vivado/camera2640_project_io.srcs/constrs_1/new
+close [ open /media/sf_git/zynq_project/vivado/camera2640_project_io.srcs/constrs_1/new/zedboard_custom_pins.xdc w ]
+add_files -fileset constrs_1 /media/sf_git/zynq_project/vivado/camera2640_project_io.srcs/constrs_1/new/zedboard_custom_pins.xdc
+set_property target_constrs_file /media/sf_git/zynq_project/vivado/camera2640_project_io.srcs/constrs_1/new/zedboard_custom_pins.xdc [current_fileset -constrset]
+save_constraints -force
+close_project
+open_project /media/sf_git/zynq_project/vivado/camera2640_project.xpr
+add_files -fileset constrs_1 -norecurse /media/sf_git/zynq_project/vivado/camera2640_project_io.srcs/constrs_1/new/zedboard_custom_pins.xdc
+import_files -fileset constrs_1 /media/sf_git/zynq_project/vivado/camera2640_project_io.srcs/constrs_1/new/zedboard_custom_pins.xdc
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+file mkdir /media/sf_git/zynq_project/vivado/camera2640_project.sdk
+file copy -force /media/sf_git/zynq_project/vivado/camera2640_project.runs/impl_1/design_1_wrapper.sysdef /media/sf_git/zynq_project/sdk/design_1_wrapper.hdf
+

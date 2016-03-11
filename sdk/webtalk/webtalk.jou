@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# 
+# Start of session at: Sun Mar  6 20:38:45 2016
+# Process ID: 3494
+# Current directory: /home/ap/projects/zynq_project/sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/ap/projects/zynq_project/sdk/webtalk/webtalk.log
+# Journal file: /home/ap/projects/zynq_project/sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

@@ -1,0 +1,138 @@
+2015.4:
+ * Version 7.0 (Rev. 1)
+ * Increased maximum resolution to 4096x2160
+ * Revision change in one or more subcores
+
+2015.3:
+ * Version 7.0
+ * Completely redesigned IP using Vivado HLS (along with new drivers)
+ * Support added for 1, 2, or 4 samples per clock enabling 4K 60fps
+ * Support added for 16 bits per video component
+ * AXI4-Lite interface required (using the driver with a processor) to configure/initialize the core
+ * Three video components supports RGB, YUV 4:4:4, YUV 4:2:2, and YUV 4:2:0
+ * Optional Video Timing Controller interface removed
+ * One single clock and reset for entire IP
+ * Clock Enable removed
+ * Optional INTC ports removed
+ * Added TKEEP, TSTRB, TID, and TDEST to AXI4-Stream
+ * Some ports renamed - aclk to ap_clk, aresetn to ap_rst_n, irq to interrupt and s_axi to s_axi_CTRL
+ * Demonstration Test Bench replaced by an Example Design
+ * IP revision number added to HDL module, library, and include file names, to support designs with both locked and upgraded IP instances
+ * Revision change in one or more subcores
+
+2015.2.1:
+ * Version 6.0 (Rev. 4)
+ * No changes
+
+2015.2:
+ * Version 6.0 (Rev. 4)
+ * No changes
+
+2015.1:
+ * Version 6.0 (Rev. 4)
+ * Enabled out-of-context clock frequency setting by adding FREQ_HZ parameter for clock interfaces
+ * Kintex ultrascale production support
+
+2014.4.1:
+ * Version 6.0 (Rev. 3)
+ * No changes
+
+2014.4:
+ * Version 6.0 (Rev. 3)
+ * Encrypted source files are concatenated together to reduce the number of files and to reduce simulator compile time
+ * XA Artix-7 (Automotive) Production support
+
+2014.3:
+ * Version 6.0 (Rev. 2)
+ * Fixed a problem with vtiming interface causing vertical offsets, no functional changes
+
+2014.2:
+ * Version 6.0 (Rev. 1)
+ * Fixed a problem with the core timing out after a fixed duration, no functional changes
+
+2014.1:
+ * Version 6.0
+ * Internal device family name change, no functional changes
+ * Virtex UltraScale Pre-Production support
+ * Defense-grade Artix-7Q, Kintex-7Q, Virtex-7Q and Zynq-7000Q Production support
+ * Constraints syntax has been simplified, no functional changes
+ * A Video Timing Controller interface added
+ * Noise generation changed to give a more Gaussian distribution
+
+2013.4:
+ * Version 5.0 (Rev. 3)
+ * Kintex UltraScale Pre-Production
+
+2013.3:
+ * Version 5.0 (Rev. 2)
+ * Reduced warnings in synthesis and simulation
+ * Added support for out of context
+ * Updated constraints to match IP heirarchy
+ * Added support for Cadence IES Simulator
+ * Added support for Synopsys VCS Simulator
+ * Added support for out of context flow
+ * Updated constraints to match IP hierarchy
+ * Added support for out of context
+ * Updated constraints to match IP heirarchy
+ * Added support for Cadence IES and Synopsys VCS simulators
+ * Added Bayer sub-sampling
+
+2013.2:
+ * Version 5.0 (Rev. 1)
+ * Added support for IUS in the demo testbench
+ * Fixed a problem with setting the video formats on the streaming inputs and outputs
+ * Added YUV 444 and monochrome support
+ * Right most line of the cross hatch is now drawn correctly
+ * Black and white checkerboard pattern added
+ * A combined vertical and horizontal ramp test pattern added
+ * Auto-upgrade feature added
+
+2013.1:
+ * Version 5.0
+ * Native Vivado release
+
+(c) Copyright 2013 - 2015 Xilinx, Inc. All rights reserved.
+
+This file contains confidential and proprietary information
+of Xilinx, Inc. and is protected under U.S. and
+international copyright and other intellectual property
+laws.
+
+DISCLAIMER
+This disclaimer is not a license and does not grant any
+rights to the materials distributed herewith. Except as
+otherwise provided in a valid license issued to you by
+Xilinx, and to the maximum extent permitted by applicable
+law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+(2) Xilinx shall not be liable (whether in contract or tort,
+including negligence, or under any other theory of
+liability) for any loss or damage of any kind or nature
+related to, arising under or in connection with these
+materials, including for any direct, or any indirect,
+special, incidental, or consequential loss or damage
+(including loss of data, profits, goodwill, or any type of
+loss or damage suffered as a result of any action brought
+by a third party) even if such damage or loss was
+reasonably foreseeable or Xilinx had been advised of the
+possibility of the same.
+
+CRITICAL APPLICATIONS
+Xilinx products are not designed or intended to be fail-
+safe, or for use in any application requiring fail-safe
+performance, such as life-support or safety devices or
+systems, Class III medical devices, nuclear facilities,
+applications related to the deployment of airbags, or any
+other applications that could lead to death, personal
+injury, or severe property or environmental damage
+(individually and collectively, "Critical
+Applications"). Customer assumes the sole risk and
+liability of any use of Xilinx products in Critical
+Applications, subject only to applicable laws and
+regulations governing limitations on product liability.
+
+THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+PART OF THIS FILE AT ALL TIMES.
